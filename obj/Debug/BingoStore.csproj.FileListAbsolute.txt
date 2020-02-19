@@ -18,3 +18,5 @@ D:\Projects GIT\StoreApp\BingoStore\obj\Debug\BingoStore.csproj.CopyComplete
 D:\Projects GIT\StoreApp\BingoStore\obj\Debug\BingoStore.exe
 D:\Projects GIT\StoreApp\BingoStore\obj\Debug\BingoStore.pdb
 D:\Projects GIT\StoreApp\BingoStore\obj\Debug\BingoStore.DashBrd.resources
+D:\Projects GIT\StoreApp\BingoStore\obj\Debug\BingoStore.ShowProducts.resources
+D:\Projects GIT\StoreApp\BingoStore\obj\Debug\BingoStore.csprojAssemblyReference.cache

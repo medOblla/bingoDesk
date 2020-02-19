@@ -34,24 +34,26 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.notification = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.adminName = new System.Windows.Forms.Label();
             this.metric = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.dshboard = new System.Windows.Forms.Button();
-            this.manageProduct = new System.Windows.Forms.Button();
-            this.newProduct = new System.Windows.Forms.Button();
-            this.reports = new System.Windows.Forms.Button();
             this.sidePanel = new System.Windows.Forms.Panel();
+            this.reports = new System.Windows.Forms.Button();
+            this.newProduct = new System.Windows.Forms.Button();
+            this.manageProduct = new System.Windows.Forms.Button();
+            this.dshboard = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.content = new System.Windows.Forms.Panel();
             this.dashBrd1 = new BingoStore.DashBrd();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel10.SuspendLayout();
+            this.content.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -95,6 +97,16 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(169, 67);
             this.panel2.TabIndex = 0;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
+            this.pictureBox10.Location = new System.Drawing.Point(14, 15);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(41, 36);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox10.TabIndex = 13;
+            this.pictureBox10.TabStop = false;
             // 
             // adminName
             // 
@@ -142,16 +154,7 @@
             // bunifuElipse1
             // 
             this.bunifuElipse1.ElipseRadius = 5;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox10.Image")));
-            this.pictureBox10.Location = new System.Drawing.Point(14, 15);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(41, 36);
-            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox10.TabIndex = 13;
-            this.pictureBox10.TabStop = false;
+            this.bunifuElipse1.TargetControl = this;
             // 
             // panel10
             // 
@@ -166,76 +169,15 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(191, 798);
             this.panel10.TabIndex = 13;
+            this.panel10.Paint += new System.Windows.Forms.PaintEventHandler(this.panel10_Paint);
             // 
-            // label16
+            // sidePanel
             // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(21, 18);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(160, 34);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "BINGO SPORTS";
-            // 
-            // dshboard
-            // 
-            this.dshboard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
-            this.dshboard.FlatAppearance.BorderSize = 0;
-            this.dshboard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
-            this.dshboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
-            this.dshboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.dshboard.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dshboard.ForeColor = System.Drawing.Color.White;
-            this.dshboard.Image = ((System.Drawing.Image)(resources.GetObject("dshboard.Image")));
-            this.dshboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.dshboard.Location = new System.Drawing.Point(27, 77);
-            this.dshboard.Name = "dshboard";
-            this.dshboard.Size = new System.Drawing.Size(164, 58);
-            this.dshboard.TabIndex = 5;
-            this.dshboard.Text = "         Dashboard";
-            this.dshboard.UseVisualStyleBackColor = true;
-            this.dshboard.Click += new System.EventHandler(this.dshboard_Click);
-            // 
-            // manageProduct
-            // 
-            this.manageProduct.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
-            this.manageProduct.FlatAppearance.BorderSize = 0;
-            this.manageProduct.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
-            this.manageProduct.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
-            this.manageProduct.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
-            this.manageProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.manageProduct.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.manageProduct.ForeColor = System.Drawing.Color.White;
-            this.manageProduct.Image = ((System.Drawing.Image)(resources.GetObject("manageProduct.Image")));
-            this.manageProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.manageProduct.Location = new System.Drawing.Point(24, 141);
-            this.manageProduct.Name = "manageProduct";
-            this.manageProduct.Size = new System.Drawing.Size(164, 58);
-            this.manageProduct.TabIndex = 5;
-            this.manageProduct.Text = "         Manage Pro";
-            this.manageProduct.UseVisualStyleBackColor = true;
-            this.manageProduct.Click += new System.EventHandler(this.manageProduct_Click);
-            // 
-            // newProduct
-            // 
-            this.newProduct.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
-            this.newProduct.FlatAppearance.BorderSize = 0;
-            this.newProduct.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
-            this.newProduct.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
-            this.newProduct.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
-            this.newProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.newProduct.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.newProduct.ForeColor = System.Drawing.Color.White;
-            this.newProduct.Image = ((System.Drawing.Image)(resources.GetObject("newProduct.Image")));
-            this.newProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.newProduct.Location = new System.Drawing.Point(24, 205);
-            this.newProduct.Name = "newProduct";
-            this.newProduct.Size = new System.Drawing.Size(164, 58);
-            this.newProduct.TabIndex = 5;
-            this.newProduct.Text = "         New Product";
-            this.newProduct.UseVisualStyleBackColor = true;
-            this.newProduct.Click += new System.EventHandler(this.newProduct_Click);
+            this.sidePanel.BackColor = System.Drawing.Color.White;
+            this.sidePanel.Location = new System.Drawing.Point(11, 77);
+            this.sidePanel.Name = "sidePanel";
+            this.sidePanel.Size = new System.Drawing.Size(10, 58);
+            this.sidePanel.TabIndex = 14;
             // 
             // reports
             // 
@@ -257,21 +199,91 @@
             this.reports.UseVisualStyleBackColor = true;
             this.reports.Click += new System.EventHandler(this.reports_Click);
             // 
-            // sidePanel
+            // newProduct
             // 
-            this.sidePanel.BackColor = System.Drawing.Color.White;
-            this.sidePanel.Location = new System.Drawing.Point(11, 77);
-            this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(10, 58);
-            this.sidePanel.TabIndex = 14;
+            this.newProduct.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
+            this.newProduct.FlatAppearance.BorderSize = 0;
+            this.newProduct.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
+            this.newProduct.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
+            this.newProduct.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
+            this.newProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newProduct.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newProduct.ForeColor = System.Drawing.Color.White;
+            this.newProduct.Image = ((System.Drawing.Image)(resources.GetObject("newProduct.Image")));
+            this.newProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.newProduct.Location = new System.Drawing.Point(24, 205);
+            this.newProduct.Name = "newProduct";
+            this.newProduct.Size = new System.Drawing.Size(164, 58);
+            this.newProduct.TabIndex = 5;
+            this.newProduct.Text = "         New Product";
+            this.newProduct.UseVisualStyleBackColor = true;
+            this.newProduct.Click += new System.EventHandler(this.newProduct_Click);
+            // 
+            // manageProduct
+            // 
+            this.manageProduct.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
+            this.manageProduct.FlatAppearance.BorderSize = 0;
+            this.manageProduct.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
+            this.manageProduct.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
+            this.manageProduct.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
+            this.manageProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.manageProduct.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manageProduct.ForeColor = System.Drawing.Color.White;
+            this.manageProduct.Image = ((System.Drawing.Image)(resources.GetObject("manageProduct.Image")));
+            this.manageProduct.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.manageProduct.Location = new System.Drawing.Point(24, 141);
+            this.manageProduct.Name = "manageProduct";
+            this.manageProduct.Size = new System.Drawing.Size(164, 58);
+            this.manageProduct.TabIndex = 5;
+            this.manageProduct.Text = "         Manage Pro";
+            this.manageProduct.UseVisualStyleBackColor = true;
+            this.manageProduct.Click += new System.EventHandler(this.manageProduct_Click);
+            // 
+            // dshboard
+            // 
+            this.dshboard.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
+            this.dshboard.FlatAppearance.BorderSize = 0;
+            this.dshboard.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
+            this.dshboard.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(43)))), ((int)(((byte)(53)))), ((int)(((byte)(63)))));
+            this.dshboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.dshboard.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dshboard.ForeColor = System.Drawing.Color.White;
+            this.dshboard.Image = ((System.Drawing.Image)(resources.GetObject("dshboard.Image")));
+            this.dshboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.dshboard.Location = new System.Drawing.Point(27, 77);
+            this.dshboard.Name = "dshboard";
+            this.dshboard.Size = new System.Drawing.Size(164, 58);
+            this.dshboard.TabIndex = 5;
+            this.dshboard.Text = "         Dashboard";
+            this.dshboard.UseVisualStyleBackColor = true;
+            this.dshboard.Click += new System.EventHandler(this.dshboard_Click);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Poppins Medium", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(21, 18);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(160, 34);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "BINGO SPORTS";
+            // 
+            // content
+            // 
+            this.content.Controls.Add(this.dashBrd1);
+            this.content.Location = new System.Drawing.Point(185, 74);
+            this.content.Name = "content";
+            this.content.Size = new System.Drawing.Size(1163, 711);
+            this.content.TabIndex = 14;
             // 
             // dashBrd1
             // 
             this.dashBrd1.BackColor = System.Drawing.Color.White;
-            this.dashBrd1.Location = new System.Drawing.Point(192, 74);
+            this.dashBrd1.Location = new System.Drawing.Point(3, 3);
             this.dashBrd1.Name = "dashBrd1";
             this.dashBrd1.Size = new System.Drawing.Size(1158, 711);
-            this.dashBrd1.TabIndex = 14;
+            this.dashBrd1.TabIndex = 15;
             // 
             // Dashboard
             // 
@@ -279,7 +291,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1351, 791);
-            this.Controls.Add(this.dashBrd1);
+            this.Controls.Add(this.content);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.bunifuDropdown1);
             this.Controls.Add(this.metric);
@@ -293,6 +305,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
+            this.content.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -315,6 +328,7 @@
         private System.Windows.Forms.Button manageProduct;
         private System.Windows.Forms.Button dshboard;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel content;
         private DashBrd dashBrd1;
     }
 }

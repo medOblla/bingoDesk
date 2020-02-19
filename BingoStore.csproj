@@ -80,6 +80,12 @@
     <Compile Include="MainControlClass.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShowProducts.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShowProducts.Designer.cs">
+      <DependentUpon>ShowProducts.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,6 +101,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ShowProducts.resx">
+      <DependentUpon>ShowProducts.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -116,10 +125,19 @@
     <Content Include="assets\box.png" />
     <Content Include="assets\buy.png" />
     <Content Include="assets\dashboard.png" />
+    <Content Include="assets\down-arrow.png" />
+    <Content Include="assets\download.png" />
+    <Content Include="assets\gear.png" />
+    <Content Include="assets\gear01.png" />
+    <Content Include="assets\hide.png" />
+    <Content Include="assets\hide01.png" />
     <Content Include="assets\man.png" />
     <Content Include="assets\order.png" />
     <Content Include="assets\report.png" />
+    <Content Include="assets\searchButton.png" />
     <Content Include="assets\supplier.png" />
+    <Content Include="assets\trash.png" />
+    <Content Include="assets\trash01.png" />
     <Content Include="assets\warehouse.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

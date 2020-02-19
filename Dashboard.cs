@@ -25,15 +25,18 @@ namespace BingoStore
         private void dshboard_Click(object sender, EventArgs e)
         {
             sidePanel.Height = dshboard.Height;
-            DashBrd d1 = new DashBrd();
-            MainControlClass.showControl(d1, this);
             sidePanel.Top = dshboard.Top;
+            DashBrd d1 = new DashBrd();
+            MainControlClass.showControl(d1,content);
+            
         }
 
         private void manageProduct_Click(object sender, EventArgs e)
         {
             sidePanel.Height = manageProduct.Height;
             sidePanel.Top = manageProduct.Top;
+            ShowProducts tab = new ShowProducts();
+            MainControlClass.showControl(tab, content);
         }
 
         private void newProduct_Click(object sender, EventArgs e)
@@ -46,6 +49,11 @@ namespace BingoStore
         {
             sidePanel.Height = newProduct.Height;
             sidePanel.Top = reports.Top;
+        }
+
+        private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
