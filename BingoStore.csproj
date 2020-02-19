@@ -65,6 +65,24 @@
     <Reference Include="WindowsFormsIntegration" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="addProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="addProduct.Designer.cs">
+      <DependentUpon>addProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addProduct02.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="addProduct02.Designer.cs">
+      <DependentUpon>addProduct02.cs</DependentUpon>
+    </Compile>
+    <Compile Include="addProduct2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="addProduct2.Designer.cs">
+      <DependentUpon>addProduct2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +104,15 @@
     <Compile Include="ShowProducts.Designer.cs">
       <DependentUpon>ShowProducts.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="addProduct.resx">
+      <DependentUpon>addProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addProduct02.resx">
+      <DependentUpon>addProduct02.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="addProduct2.resx">
+      <DependentUpon>addProduct2.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -119,6 +146,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="assets\addImage.png" />
     <Content Include="assets\adminIcon.png" />
     <Content Include="assets\bell.png" />
     <Content Include="assets\Blacklogo.png" />

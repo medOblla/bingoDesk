@@ -17,7 +17,9 @@ namespace BingoStore
         public Dashboard()
         {
             InitializeComponent();
-            
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximumSize = this.Size;
+            this.MinimumSize = this.Size;
 
             sidePanel.Top = dshboard.Top;
         }
@@ -43,6 +45,8 @@ namespace BingoStore
         {
             sidePanel.Height = newProduct.Height;
             sidePanel.Top = newProduct.Top;
+            addProduct tab = new addProduct();
+            MainControlClass.showControl(tab, content);
         }
 
         private void reports_Click(object sender, EventArgs e)
@@ -52,6 +56,11 @@ namespace BingoStore
         }
 
         private void panel10_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
         {
 
         }
