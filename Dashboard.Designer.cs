@@ -36,8 +36,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.adminName = new System.Windows.Forms.Label();
-            this.metric = new Bunifu.Framework.UI.BunifuDropdown();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel10 = new System.Windows.Forms.Panel();
             this.sidePanel = new System.Windows.Forms.Panel();
@@ -117,39 +115,6 @@
             this.adminName.Size = new System.Drawing.Size(103, 23);
             this.adminName.TabIndex = 2;
             this.adminName.Text = "Hamid Oublla";
-            // 
-            // metric
-            // 
-            this.metric.BackColor = System.Drawing.Color.Transparent;
-            this.metric.BorderRadius = 5;
-            this.metric.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.metric.ForeColor = System.Drawing.Color.Black;
-            this.metric.Items = new string[] {
-        "Year",
-        "Month",
-        "Day"};
-            this.metric.Location = new System.Drawing.Point(1434, 92);
-            this.metric.Name = "metric";
-            this.metric.NomalColor = System.Drawing.Color.White;
-            this.metric.onHoverColor = System.Drawing.Color.White;
-            this.metric.selectedIndex = 0;
-            this.metric.Size = new System.Drawing.Size(126, 35);
-            this.metric.TabIndex = 7;
-            // 
-            // bunifuDropdown1
-            // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.BorderRadius = 3;
-            this.bunifuDropdown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown1.Items = new string[0];
-            this.bunifuDropdown1.Location = new System.Drawing.Point(1431, 91);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(129)))), ((int)(((byte)(77)))));
-            this.bunifuDropdown1.selectedIndex = -1;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(128, 35);
-            this.bunifuDropdown1.TabIndex = 8;
             // 
             // bunifuElipse1
             // 
@@ -290,11 +255,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1351, 791);
+            this.ClientSize = new System.Drawing.Size(1350, 791);
             this.Controls.Add(this.content);
             this.Controls.Add(this.panel10);
-            this.Controls.Add(this.bunifuDropdown1);
-            this.Controls.Add(this.metric);
             this.Controls.Add(this.panel1);
             this.Name = "Dashboard";
             this.Text = "Form1";
@@ -318,8 +281,6 @@
         private System.Windows.Forms.Button notification;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label adminName;
-        private Bunifu.Framework.UI.BunifuDropdown metric;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Panel panel10;
@@ -329,8 +290,8 @@
         private System.Windows.Forms.Button manageProduct;
         private System.Windows.Forms.Button dshboard;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Panel content;
         private DashBrd dashBrd1;
+        private System.Windows.Forms.Panel content;
     }
 }
 
