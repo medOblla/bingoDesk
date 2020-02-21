@@ -7,28 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+using System.Net;
+using System.IO;
+using BingoStore.Models;
+using BingoStore.APIs;
 
 
 namespace BingoStore
 {
     public partial class ShowProducts : UserControl
-    {   private String connectionString = "Data Source=DESKTOP-7RFMD1S;Initial Catalog=eventtest;Integrated Security=True";
-        private String query = "SELECT product_title, nbInStock, category, brand";
+    {   
+        
         public ShowProducts()
         {
             InitializeComponent();
             int x = 87;
             int y = 189;
-
-            SqlConnection conn = new SqlConnection(connectionString);
-            conn.Open();
-            DataSet ds = new DataSet();
-            SqlDataAdapter SDA = new SqlDataAdapter(query, connectionString);
-            SDA.Fill(ds);
-            foreach(DataRow dr in ds.Tables[0].Rows)
+            List<Comments> objList = Product.Page_load();
+            foreach (Comments product in objList)
             {
-                String product_id = dr["product_id"].ToString();
+                //String product_id = dr["product_id"].ToString();
+                Console.WriteLine(product.email.ToString());
                 Bunifu.Framework.UI.BunifuCheckbox productCheck = new Bunifu.Framework.UI.BunifuCheckbox();
                 PictureBox productPic = new PictureBox();
                 RichTextBox product_title = new RichTextBox();
@@ -69,7 +68,7 @@ namespace BingoStore
                product_title.Name = "productTitle";
                product_title.Size = new System.Drawing.Size(235, 75);
                product_title.TabIndex = 35;
-               product_title.Text = "";
+               product_title.Text = product.email; // it should show something here
                 // 
                 // itemsInStock
                 // 
@@ -80,7 +79,7 @@ namespace BingoStore
                item_inStock.Name = "itemsInStock";
                item_inStock.Size = new System.Drawing.Size(18, 23);
                item_inStock.TabIndex = 36;
-               item_inStock.Text = "5";
+               item_inStock.Text = product.id; // it should show something here
                 // 
                 // inStock
                 // 
@@ -91,7 +90,7 @@ namespace BingoStore
                in_stock.Name = "inStock";
                in_stock.Size = new System.Drawing.Size(59,y);
                in_stock.TabIndex = 37;
-               in_stock.Text = "in stock";
+               in_stock.Text = product.name; // it should show something here
                 // 
                 // type
                 // 
