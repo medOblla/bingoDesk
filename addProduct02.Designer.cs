@@ -29,25 +29,17 @@
         private void InitializeComponent()
         {
             this.firstPanel = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.sizes = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.carrier = new Bunifu.Framework.UI.BunifuDropdown();
             this.label20 = new System.Windows.Forms.Label();
-            this.bunifuMetroTextbox3 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.height = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label19 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.weight = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.colors = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.remove02 = new System.Windows.Forms.Label();
-            this.remove01 = new System.Windows.Forms.Label();
             this.save = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.label2 = new System.Windows.Forms.Label();
             this.back = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
@@ -57,15 +49,23 @@
             this.label7 = new System.Windows.Forms.Label();
             this.productQuantity = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label6 = new System.Windows.Forms.Label();
-            this.bunifuMetroTextbox1 = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.barcode = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label4 = new System.Windows.Forms.Label();
             this.sku = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label8 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.haveOptions = new Bunifu.Framework.UI.BunifuCheckbox();
             this.optionsPanel = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.colors = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.remove02 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.sizes = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.remove01 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.haveOptions = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.firstPanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -86,51 +86,13 @@
             this.firstPanel.Size = new System.Drawing.Size(1131, 657);
             this.firstPanel.TabIndex = 20;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 42);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Products";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(13, 146);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(43, 22);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "Color";
-            // 
-            // sizes
-            // 
-            this.sizes.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
-            this.sizes.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.sizes.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.sizes.BorderThickness = 1;
-            this.sizes.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.sizes.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.sizes.ForeColor = System.Drawing.Color.Silver;
-            this.sizes.isPassword = false;
-            this.sizes.Location = new System.Drawing.Point(17, 88);
-            this.sizes.Margin = new System.Windows.Forms.Padding(4);
-            this.sizes.Name = "sizes";
-            this.sizes.Size = new System.Drawing.Size(518, 40);
-            this.sizes.TabIndex = 26;
-            this.sizes.Text = "Separate sizes with a comma ";
-            this.sizes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.carrier);
             this.panel4.Controls.Add(this.label20);
-            this.panel4.Controls.Add(this.bunifuMetroTextbox3);
+            this.panel4.Controls.Add(this.height);
             this.panel4.Controls.Add(this.label19);
             this.panel4.Controls.Add(this.label14);
             this.panel4.Controls.Add(this.label15);
@@ -170,23 +132,23 @@
             this.label20.TabIndex = 43;
             this.label20.Text = "Carrier";
             // 
-            // bunifuMetroTextbox3
+            // height
             // 
-            this.bunifuMetroTextbox3.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
-            this.bunifuMetroTextbox3.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox3.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox3.BorderThickness = 1;
-            this.bunifuMetroTextbox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox3.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMetroTextbox3.ForeColor = System.Drawing.Color.Silver;
-            this.bunifuMetroTextbox3.isPassword = false;
-            this.bunifuMetroTextbox3.Location = new System.Drawing.Point(293, 117);
-            this.bunifuMetroTextbox3.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox3.Name = "bunifuMetroTextbox3";
-            this.bunifuMetroTextbox3.Size = new System.Drawing.Size(242, 44);
-            this.bunifuMetroTextbox3.TabIndex = 42;
-            this.bunifuMetroTextbox3.Text = "CM 0.0";
-            this.bunifuMetroTextbox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.height.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
+            this.height.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.height.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.height.BorderThickness = 1;
+            this.height.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.height.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.height.ForeColor = System.Drawing.Color.Silver;
+            this.height.isPassword = false;
+            this.height.Location = new System.Drawing.Point(293, 117);
+            this.height.Margin = new System.Windows.Forms.Padding(4);
+            this.height.Name = "height";
+            this.height.Size = new System.Drawing.Size(242, 44);
+            this.height.TabIndex = 42;
+            this.height.Text = "CM 0.0";
+            this.height.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label19
             // 
@@ -258,56 +220,6 @@
             this.label18.TabIndex = 23;
             this.label18.Text = "Weight";
             // 
-            // colors
-            // 
-            this.colors.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
-            this.colors.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.colors.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.colors.BorderThickness = 1;
-            this.colors.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.colors.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.colors.ForeColor = System.Drawing.Color.Silver;
-            this.colors.isPassword = false;
-            this.colors.Location = new System.Drawing.Point(17, 172);
-            this.colors.Margin = new System.Windows.Forms.Padding(4);
-            this.colors.Name = "colors";
-            this.colors.Size = new System.Drawing.Size(518, 40);
-            this.colors.TabIndex = 28;
-            this.colors.Text = "Separate colors with a comma ";
-            this.colors.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Poppins Medium", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(12, 21);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(74, 28);
-            this.label10.TabIndex = 40;
-            this.label10.Text = "Options";
-            // 
-            // remove02
-            // 
-            this.remove02.AutoSize = true;
-            this.remove02.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.remove02.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(78)))), ((int)(((byte)(138)))));
-            this.remove02.Location = new System.Drawing.Point(477, 146);
-            this.remove02.Name = "remove02";
-            this.remove02.Size = new System.Drawing.Size(58, 22);
-            this.remove02.TabIndex = 27;
-            this.remove02.Text = "Remove";
-            // 
-            // remove01
-            // 
-            this.remove01.AutoSize = true;
-            this.remove01.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.remove01.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(78)))), ((int)(((byte)(138)))));
-            this.remove01.Location = new System.Drawing.Point(477, 62);
-            this.remove01.Name = "remove01";
-            this.remove01.Size = new System.Drawing.Size(58, 22);
-            this.remove01.TabIndex = 24;
-            this.remove01.Text = "Remove";
-            // 
             // save
             // 
             this.save.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(98)))), ((int)(((byte)(192)))));
@@ -342,16 +254,7 @@
             this.save.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.save.Textcolor = System.Drawing.Color.White;
             this.save.TextFont = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(13, 62);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(33, 22);
-            this.label2.TabIndex = 24;
-            this.label2.Text = "Size";
+            this.save.Click += new System.EventHandler(this.save_Click);
             // 
             // back
             // 
@@ -400,7 +303,7 @@
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.productQuantity);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.bunifuMetroTextbox1);
+            this.panel2.Controls.Add(this.barcode);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.sku);
             this.panel2.Controls.Add(this.label8);
@@ -490,23 +393,23 @@
             this.label6.TabIndex = 23;
             this.label6.Text = "Available";
             // 
-            // bunifuMetroTextbox1
+            // barcode
             // 
-            this.bunifuMetroTextbox1.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
-            this.bunifuMetroTextbox1.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox1.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.bunifuMetroTextbox1.BorderThickness = 1;
-            this.bunifuMetroTextbox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.bunifuMetroTextbox1.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.bunifuMetroTextbox1.ForeColor = System.Drawing.Color.Silver;
-            this.bunifuMetroTextbox1.isPassword = false;
-            this.bunifuMetroTextbox1.Location = new System.Drawing.Point(292, 65);
-            this.bunifuMetroTextbox1.Margin = new System.Windows.Forms.Padding(4);
-            this.bunifuMetroTextbox1.Name = "bunifuMetroTextbox1";
-            this.bunifuMetroTextbox1.Size = new System.Drawing.Size(243, 44);
-            this.bunifuMetroTextbox1.TabIndex = 24;
-            this.bunifuMetroTextbox1.Text = "e.g. Shirts";
-            this.bunifuMetroTextbox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.barcode.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
+            this.barcode.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.barcode.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.barcode.BorderThickness = 1;
+            this.barcode.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.barcode.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.barcode.ForeColor = System.Drawing.Color.Silver;
+            this.barcode.isPassword = false;
+            this.barcode.Location = new System.Drawing.Point(292, 65);
+            this.barcode.Margin = new System.Windows.Forms.Padding(4);
+            this.barcode.Name = "barcode";
+            this.barcode.Size = new System.Drawing.Size(243, 44);
+            this.barcode.TabIndex = 24;
+            this.barcode.Text = "e.g. Shirts";
+            this.barcode.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label4
             // 
@@ -546,39 +449,6 @@
             this.label8.TabIndex = 23;
             this.label8.Text = "SKU (Stock Keeping Unit)";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.Gray;
-            this.label11.Location = new System.Drawing.Point(44, 40);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(376, 22);
-            this.label11.TabIndex = 38;
-            this.label11.Text = "This product has multiple options, like different sizes or colors";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Poppins Medium", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(10, 7);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(79, 28);
-            this.label12.TabIndex = 25;
-            this.label12.Text = "Variants";
-            // 
-            // haveOptions
-            // 
-            this.haveOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(93)))), ((int)(((byte)(191)))));
-            this.haveOptions.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.haveOptions.Checked = true;
-            this.haveOptions.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(93)))), ((int)(((byte)(191)))));
-            this.haveOptions.ForeColor = System.Drawing.Color.White;
-            this.haveOptions.Location = new System.Drawing.Point(17, 40);
-            this.haveOptions.Name = "haveOptions";
-            this.haveOptions.Size = new System.Drawing.Size(20, 20);
-            this.haveOptions.TabIndex = 37;
-            // 
             // optionsPanel
             // 
             this.optionsPanel.BackColor = System.Drawing.Color.White;
@@ -595,6 +465,94 @@
             this.optionsPanel.Size = new System.Drawing.Size(556, 497);
             this.optionsPanel.TabIndex = 31;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Poppins Medium", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(12, 21);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(74, 28);
+            this.label10.TabIndex = 40;
+            this.label10.Text = "Options";
+            // 
+            // colors
+            // 
+            this.colors.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
+            this.colors.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.colors.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.colors.BorderThickness = 1;
+            this.colors.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.colors.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.colors.ForeColor = System.Drawing.Color.Silver;
+            this.colors.isPassword = false;
+            this.colors.Location = new System.Drawing.Point(17, 172);
+            this.colors.Margin = new System.Windows.Forms.Padding(4);
+            this.colors.Name = "colors";
+            this.colors.Size = new System.Drawing.Size(518, 40);
+            this.colors.TabIndex = 28;
+            this.colors.Text = "Separate colors with a comma ";
+            this.colors.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // remove02
+            // 
+            this.remove02.AutoSize = true;
+            this.remove02.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.remove02.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(78)))), ((int)(((byte)(138)))));
+            this.remove02.Location = new System.Drawing.Point(477, 146);
+            this.remove02.Name = "remove02";
+            this.remove02.Size = new System.Drawing.Size(58, 22);
+            this.remove02.TabIndex = 27;
+            this.remove02.Text = "Remove";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(13, 146);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(43, 22);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "Color";
+            // 
+            // sizes
+            // 
+            this.sizes.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
+            this.sizes.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sizes.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.sizes.BorderThickness = 1;
+            this.sizes.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.sizes.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.sizes.ForeColor = System.Drawing.Color.Silver;
+            this.sizes.isPassword = false;
+            this.sizes.Location = new System.Drawing.Point(17, 88);
+            this.sizes.Margin = new System.Windows.Forms.Padding(4);
+            this.sizes.Name = "sizes";
+            this.sizes.Size = new System.Drawing.Size(518, 40);
+            this.sizes.TabIndex = 26;
+            this.sizes.Text = "Separate sizes with a comma ";
+            this.sizes.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // remove01
+            // 
+            this.remove01.AutoSize = true;
+            this.remove01.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.remove01.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(78)))), ((int)(((byte)(138)))));
+            this.remove01.Location = new System.Drawing.Point(477, 62);
+            this.remove01.Name = "remove01";
+            this.remove01.Size = new System.Drawing.Size(58, 22);
+            this.remove01.TabIndex = 24;
+            this.remove01.Text = "Remove";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(13, 62);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(33, 22);
+            this.label2.TabIndex = 24;
+            this.label2.Text = "Size";
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -606,6 +564,49 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(556, 84);
             this.panel1.TabIndex = 30;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.Gray;
+            this.label11.Location = new System.Drawing.Point(44, 40);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(376, 22);
+            this.label11.TabIndex = 38;
+            this.label11.Text = "This product has multiple options, like different sizes or colors";
+            // 
+            // haveOptions
+            // 
+            this.haveOptions.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(93)))), ((int)(((byte)(191)))));
+            this.haveOptions.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.haveOptions.Checked = true;
+            this.haveOptions.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(93)))), ((int)(((byte)(191)))));
+            this.haveOptions.ForeColor = System.Drawing.Color.White;
+            this.haveOptions.Location = new System.Drawing.Point(17, 40);
+            this.haveOptions.Name = "haveOptions";
+            this.haveOptions.Size = new System.Drawing.Size(20, 20);
+            this.haveOptions.TabIndex = 37;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Poppins Medium", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(10, 7);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(79, 28);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Variants";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Poppins Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(15, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 42);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Products";
             // 
             // addProduct02
             // 
@@ -637,7 +638,7 @@
         private System.Windows.Forms.Panel panel4;
         private Bunifu.Framework.UI.BunifuDropdown carrier;
         private System.Windows.Forms.Label label20;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox3;
+        private Bunifu.Framework.UI.BunifuMetroTextbox height;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
@@ -654,7 +655,7 @@
         private System.Windows.Forms.Label label7;
         private Bunifu.Framework.UI.BunifuMetroTextbox productQuantity;
         private System.Windows.Forms.Label label6;
-        private Bunifu.Framework.UI.BunifuMetroTextbox bunifuMetroTextbox1;
+        private Bunifu.Framework.UI.BunifuMetroTextbox barcode;
         private System.Windows.Forms.Label label4;
         private Bunifu.Framework.UI.BunifuMetroTextbox sku;
         private System.Windows.Forms.Label label8;

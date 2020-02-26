@@ -34,6 +34,7 @@
             this.export = new System.Windows.Forms.Label();
             this.notification = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.scrollable = new System.Windows.Forms.Panel();
             this.actionsDropDown = new Bunifu.Framework.UI.BunifuDropdown();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -98,6 +99,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.scrollable);
             this.panel1.Controls.Add(this.actionsDropDown);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
@@ -118,6 +120,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1117, 594);
             this.panel1.TabIndex = 19;
+            // 
+            // scrollable
+            // 
+            this.scrollable.Location = new System.Drawing.Point(64, 161);
+            this.scrollable.Name = "scrollable";
+            this.scrollable.Size = new System.Drawing.Size(1008, 430);
+            this.scrollable.TabIndex = 35;
             // 
             // actionsDropDown
             // 
@@ -309,6 +318,7 @@
             this.all.Size = new System.Drawing.Size(25, 23);
             this.all.TabIndex = 18;
             this.all.Text = "All";
+            this.all.Click += new System.EventHandler(this.all_Click);
             // 
             // label2
             // 
@@ -364,5 +374,6 @@
         private System.Windows.Forms.Button button1;
         private Bunifu.Framework.UI.BunifuMetroTextbox searchBar;
         private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
+        private System.Windows.Forms.Panel scrollable;
     }
 }

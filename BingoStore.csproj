@@ -96,6 +96,7 @@
     <Compile Include="DashBrd.Designer.cs">
       <DependentUpon>DashBrd.cs</DependentUpon>
     </Compile>
+    <Compile Include="DataStream.cs" />
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +105,8 @@
     </Compile>
     <Compile Include="MainControlClass.cs" />
     <Compile Include="Models\Comments.cs" />
+    <Compile Include="Models\FinalProduct.cs" />
+    <Compile Include="Models\ProductCls.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShowProducts.cs">
@@ -111,6 +114,12 @@
     </Compile>
     <Compile Include="ShowProducts.Designer.cs">
       <DependentUpon>ShowProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="updateProduct.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="updateProduct.Designer.cs">
+      <DependentUpon>updateProduct.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="addProduct.resx">
       <DependentUpon>addProduct.cs</DependentUpon>
@@ -138,6 +147,9 @@
     </Compile>
     <EmbeddedResource Include="ShowProducts.resx">
       <DependentUpon>ShowProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateProduct.resx">
+      <DependentUpon>updateProduct.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -176,6 +188,7 @@
     <Content Include="assets\supplier.png" />
     <Content Include="assets\trash.png" />
     <Content Include="assets\trash01.png" />
+    <Content Include="assets\trial.jpeg" />
     <Content Include="assets\warehouse.png" />
   </ItemGroup>
   <ItemGroup />
