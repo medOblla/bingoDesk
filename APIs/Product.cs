@@ -40,6 +40,7 @@ namespace BingoStore.APIs
                 {"product_description", product.product_description },
                 {"product_images", product.product_images },
                 {"product_category", product.product_category },
+                {"gender", product.product_gender},
                 {"product_brand", product.product_brand},
                 {"product_tags", product.product_tags},
                 {"product_profit_price", product.product_profit_price.ToString()},
@@ -78,6 +79,7 @@ namespace BingoStore.APIs
                 {"product_description", product.product_description },
                 {"product_images", product.product_images },
                 {"product_category", product.product_category },
+                {"gender", product.product_gender},
                 {"product_brand", product.product_brand},
                 {"product_tags", product.product_tags},
                 {"product_profit_price", product.product_profit_price.ToString()},
@@ -90,7 +92,7 @@ namespace BingoStore.APIs
                 {"product_wheight", product.product_wheight.ToString()},
                 {"product_height", product.product_height.ToString()},
                 {"product_carrier", product.product_carrier},
-                {"product_size", product.product_size.ToString()},
+                {"product_size", product.product_size},
                 {"product_colors", product.product_colors},
             };
             var content = new FormUrlEncodedContent(updated_values);

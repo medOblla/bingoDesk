@@ -31,6 +31,7 @@ namespace BingoStore
             carrierProduct.product_profit_price = product.product_profit_price;
             carrierProduct.product_compare_to_price = product.product_compare_to_price;
             carrierProduct.cost_per_item = product.cost_per_item;
+            carrierProduct.product_images = product.product_images;
             sku.Text = product.product_sku;
             barcode.Text = product.product_barcode;
             productQuantity.Text = product.product_quantity.ToString();
@@ -66,6 +67,7 @@ namespace BingoStore
             product.product_profit_price = carrierProduct.product_profit_price;
             product.product_compare_to_price = carrierProduct.product_compare_to_price;
             product.cost_per_item = carrierProduct.cost_per_item;
+            product.product_images = carrierProduct.product_images;
             product.product_sku = sku.Text;
             product.product_barcode = barcode.Text;
             product.product_quantity = int.Parse(productQuantity.Text);

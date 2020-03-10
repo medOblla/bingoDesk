@@ -25,6 +25,7 @@ namespace BingoStore
             price.Text = product.product_profit_price.ToString();
             compareToPrice.Text = product.product_compare_to_price.ToString();
             costPerItem.Text = product.cost_per_item.ToString();
+            carrier.product_images = product.product_images;
             carrier.product_id = product.product_id;
             carrier.product_sku = product.product_sku;
             carrier.product_barcode = product.product_barcode;
@@ -36,6 +37,7 @@ namespace BingoStore
         private void next_Click(object sender, EventArgs e)
         {
             FinalProduct product = new FinalProduct();
+            product.product_id = carrier.product_id;
             product.product_title = title.Text;
             product.product_description = description.Text;
             product.product_category = type.Text;
@@ -43,6 +45,7 @@ namespace BingoStore
             product.product_profit_price = double.Parse(price.Text);
             product.product_compare_to_price = double.Parse(compareToPrice.Text);
             product.cost_per_item = double.Parse(costPerItem.Text);
+            product.product_images = carrier.product_images;
             product.product_sku = carrier.product_sku;
             product.product_barcode = carrier.product_barcode;
             product.product_quantity = carrier.product_quantity;

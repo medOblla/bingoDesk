@@ -31,41 +31,42 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addProduct));
             this.label1 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.title = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label3 = new System.Windows.Forms.Label();
             this.description = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.title = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.type = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.brand = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.tags = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label7 = new System.Windows.Forms.Label();
+            this.tags = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.brand = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.type = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.productImage = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.price = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.margin = new System.Windows.Forms.Label();
-            this.compareToPrice = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.costPerItem = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.label13 = new System.Windows.Forms.Label();
             this.marginVal = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.costPerItem = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.compareToPrice = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.margin = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.price = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label9 = new System.Windows.Forms.Label();
             this.next = new Bunifu.Framework.UI.BunifuFlatButton();
             this.discard = new Bunifu.Framework.UI.BunifuFlatButton();
             this.firstPanel = new System.Windows.Forms.Panel();
+            this.firstImage = new System.Windows.Forms.PictureBox();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.firstPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.firstImage)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -91,15 +92,24 @@
             this.panel4.Size = new System.Drawing.Size(574, 294);
             this.panel4.TabIndex = 25;
             // 
-            // label2
+            // description
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 23);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Title";
+            this.description.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.description.Location = new System.Drawing.Point(14, 112);
+            this.description.Name = "description";
+            this.description.Size = new System.Drawing.Size(546, 172);
+            this.description.TabIndex = 24;
+            this.description.Text = "";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(10, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(83, 23);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Description";
             // 
             // title
             // 
@@ -119,24 +129,15 @@
             this.title.Text = "Short sleeve t-shirt";
             this.title.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // label3
+            // label2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(10, 86);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 23);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Description";
-            // 
-            // description
-            // 
-            this.description.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.description.Location = new System.Drawing.Point(14, 112);
-            this.description.Name = "description";
-            this.description.Size = new System.Drawing.Size(546, 172);
-            this.description.TabIndex = 24;
-            this.description.Text = "";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(10, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(36, 23);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Title";
             // 
             // panel2
             // 
@@ -154,71 +155,15 @@
             this.panel2.Size = new System.Drawing.Size(517, 294);
             this.panel2.TabIndex = 26;
             // 
-            // label4
+            // label7
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 41);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 23);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Product Type";
-            // 
-            // type
-            // 
-            this.type.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
-            this.type.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.type.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.type.BorderThickness = 1;
-            this.type.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.type.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.type.ForeColor = System.Drawing.Color.Silver;
-            this.type.isPassword = false;
-            this.type.Location = new System.Drawing.Point(17, 65);
-            this.type.Margin = new System.Windows.Forms.Padding(4);
-            this.type.Name = "type";
-            this.type.Size = new System.Drawing.Size(337, 44);
-            this.type.TabIndex = 24;
-            this.type.Text = "e.g. Shirts";
-            this.type.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 120);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 23);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Brand";
-            // 
-            // brand
-            // 
-            this.brand.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
-            this.brand.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.brand.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.brand.BorderThickness = 1;
-            this.brand.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.brand.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.brand.ForeColor = System.Drawing.Color.Silver;
-            this.brand.isPassword = false;
-            this.brand.Location = new System.Drawing.Point(17, 144);
-            this.brand.Margin = new System.Windows.Forms.Padding(4);
-            this.brand.Name = "brand";
-            this.brand.Size = new System.Drawing.Size(337, 44);
-            this.brand.TabIndex = 24;
-            this.brand.Text = "e.g. Nike";
-            this.brand.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 202);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 23);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Tags";
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Poppins Medium", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(10, 7);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(115, 28);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "Organization";
             // 
             // tags
             // 
@@ -238,21 +183,77 @@
             this.tags.Text = "summer, footbal, men";
             this.tags.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // label7
+            // label6
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Poppins Medium", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(10, 7);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 28);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "Organization";
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(13, 202);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(42, 23);
+            this.label6.TabIndex = 23;
+            this.label6.Text = "Tags";
+            // 
+            // brand
+            // 
+            this.brand.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
+            this.brand.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.brand.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.brand.BorderThickness = 1;
+            this.brand.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.brand.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.brand.ForeColor = System.Drawing.Color.Silver;
+            this.brand.isPassword = false;
+            this.brand.Location = new System.Drawing.Point(17, 144);
+            this.brand.Margin = new System.Windows.Forms.Padding(4);
+            this.brand.Name = "brand";
+            this.brand.Size = new System.Drawing.Size(337, 44);
+            this.brand.TabIndex = 24;
+            this.brand.Text = "e.g. Nike";
+            this.brand.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(13, 120);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(49, 23);
+            this.label5.TabIndex = 23;
+            this.label5.Text = "Brand";
+            // 
+            // type
+            // 
+            this.type.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
+            this.type.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.type.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.type.BorderThickness = 1;
+            this.type.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.type.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.type.ForeColor = System.Drawing.Color.Silver;
+            this.type.isPassword = false;
+            this.type.Location = new System.Drawing.Point(17, 65);
+            this.type.Margin = new System.Windows.Forms.Padding(4);
+            this.type.Name = "type";
+            this.type.Size = new System.Drawing.Size(337, 44);
+            this.type.TabIndex = 24;
+            this.type.Text = "e.g. Shirts";
+            this.type.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(13, 41);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(96, 23);
+            this.label4.TabIndex = 23;
+            this.label4.Text = "Product Type";
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.productImage);
+            this.panel3.Controls.Add(this.firstImage);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Location = new System.Drawing.Point(13, 323);
             this.panel3.Name = "panel3";
@@ -268,20 +269,6 @@
             this.label8.Size = new System.Drawing.Size(73, 28);
             this.label8.TabIndex = 26;
             this.label8.Text = "Images";
-            // 
-            // productImage
-            // 
-            this.productImage.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.productImage.FlatAppearance.BorderSize = 0;
-            this.productImage.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.productImage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.productImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.productImage.Image = ((System.Drawing.Image)(resources.GetObject("productImage.Image")));
-            this.productImage.Location = new System.Drawing.Point(14, 42);
-            this.productImage.Name = "productImage";
-            this.productImage.Size = new System.Drawing.Size(546, 189);
-            this.productImage.TabIndex = 39;
-            this.productImage.UseVisualStyleBackColor = true;
             // 
             // panel5
             // 
@@ -303,83 +290,50 @@
             this.panel5.Size = new System.Drawing.Size(517, 245);
             this.panel5.TabIndex = 28;
             // 
-            // label9
+            // marginVal
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Poppins Medium", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(10, 13);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 28);
-            this.label9.TabIndex = 26;
-            this.label9.Text = "Pricing";
+            this.marginVal.AutoSize = true;
+            this.marginVal.Font = new System.Drawing.Font("Poppins Medium", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.marginVal.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.marginVal.Location = new System.Drawing.Point(225, 46);
+            this.marginVal.Name = "marginVal";
+            this.marginVal.Size = new System.Drawing.Size(30, 19);
+            this.marginVal.TabIndex = 35;
+            this.marginVal.Text = "20%";
+            this.marginVal.Visible = false;
             // 
-            // price
+            // label13
             // 
-            this.price.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
-            this.price.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.price.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.price.BorderThickness = 1;
-            this.price.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.price.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.price.ForeColor = System.Drawing.Color.Silver;
-            this.price.isPassword = false;
-            this.price.Location = new System.Drawing.Point(15, 69);
-            this.price.Margin = new System.Windows.Forms.Padding(4);
-            this.price.Name = "price";
-            this.price.Size = new System.Drawing.Size(240, 44);
-            this.price.TabIndex = 27;
-            this.price.Text = "MAD 0.00";
-            this.price.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.Gray;
+            this.label13.Location = new System.Drawing.Point(44, 211);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(173, 22);
+            this.label13.TabIndex = 34;
+            this.label13.Text = "Charge tax on this prodcut";
             // 
-            // label10
+            // bunifuCheckbox1
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(17, 42);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(42, 23);
-            this.label10.TabIndex = 28;
-            this.label10.Text = "Price";
+            this.bunifuCheckbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(93)))), ((int)(((byte)(191)))));
+            this.bunifuCheckbox1.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.bunifuCheckbox1.Checked = true;
+            this.bunifuCheckbox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(93)))), ((int)(((byte)(191)))));
+            this.bunifuCheckbox1.ForeColor = System.Drawing.Color.White;
+            this.bunifuCheckbox1.Location = new System.Drawing.Point(17, 213);
+            this.bunifuCheckbox1.Name = "bunifuCheckbox1";
+            this.bunifuCheckbox1.Size = new System.Drawing.Size(20, 20);
+            this.bunifuCheckbox1.TabIndex = 33;
             // 
-            // margin
+            // label12
             // 
-            this.margin.AutoSize = true;
-            this.margin.Font = new System.Drawing.Font("Poppins Medium", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.margin.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.margin.Location = new System.Drawing.Point(167, 45);
-            this.margin.Name = "margin";
-            this.margin.Size = new System.Drawing.Size(55, 19);
-            this.margin.TabIndex = 28;
-            this.margin.Text = "Margin : ";
-            this.margin.Visible = false;
-            // 
-            // compareToPrice
-            // 
-            this.compareToPrice.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
-            this.compareToPrice.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.compareToPrice.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.compareToPrice.BorderThickness = 1;
-            this.compareToPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.compareToPrice.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.compareToPrice.ForeColor = System.Drawing.Color.Silver;
-            this.compareToPrice.isPassword = false;
-            this.compareToPrice.Location = new System.Drawing.Point(269, 69);
-            this.compareToPrice.Margin = new System.Windows.Forms.Padding(4);
-            this.compareToPrice.Name = "compareToPrice";
-            this.compareToPrice.Size = new System.Drawing.Size(240, 44);
-            this.compareToPrice.TabIndex = 29;
-            this.compareToPrice.Text = "MAD 0.00";
-            this.compareToPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(271, 42);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(124, 23);
-            this.label11.TabIndex = 30;
-            this.label11.Text = "Compare to price";
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(17, 127);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(97, 23);
+            this.label12.TabIndex = 32;
+            this.label12.Text = "Cost per item";
             // 
             // costPerItem
             // 
@@ -399,50 +353,83 @@
             this.costPerItem.Text = "MAD 0.00";
             this.costPerItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // label12
+            // label11
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(17, 127);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(97, 23);
-            this.label12.TabIndex = 32;
-            this.label12.Text = "Cost per item";
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(271, 42);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(124, 23);
+            this.label11.TabIndex = 30;
+            this.label11.Text = "Compare to price";
             // 
-            // bunifuCheckbox1
+            // compareToPrice
             // 
-            this.bunifuCheckbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(93)))), ((int)(((byte)(191)))));
-            this.bunifuCheckbox1.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.bunifuCheckbox1.Checked = true;
-            this.bunifuCheckbox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(93)))), ((int)(((byte)(191)))));
-            this.bunifuCheckbox1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox1.Location = new System.Drawing.Point(17, 213);
-            this.bunifuCheckbox1.Name = "bunifuCheckbox1";
-            this.bunifuCheckbox1.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox1.TabIndex = 33;
+            this.compareToPrice.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
+            this.compareToPrice.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.compareToPrice.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.compareToPrice.BorderThickness = 1;
+            this.compareToPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.compareToPrice.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.compareToPrice.ForeColor = System.Drawing.Color.Silver;
+            this.compareToPrice.isPassword = false;
+            this.compareToPrice.Location = new System.Drawing.Point(269, 69);
+            this.compareToPrice.Margin = new System.Windows.Forms.Padding(4);
+            this.compareToPrice.Name = "compareToPrice";
+            this.compareToPrice.Size = new System.Drawing.Size(240, 44);
+            this.compareToPrice.TabIndex = 29;
+            this.compareToPrice.Text = "MAD 0.00";
+            this.compareToPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // label13
+            // margin
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Gray;
-            this.label13.Location = new System.Drawing.Point(44, 211);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(173, 22);
-            this.label13.TabIndex = 34;
-            this.label13.Text = "Charge tax on this prodcut";
+            this.margin.AutoSize = true;
+            this.margin.Font = new System.Drawing.Font("Poppins Medium", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.margin.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.margin.Location = new System.Drawing.Point(167, 45);
+            this.margin.Name = "margin";
+            this.margin.Size = new System.Drawing.Size(55, 19);
+            this.margin.TabIndex = 28;
+            this.margin.Text = "Margin : ";
+            this.margin.Visible = false;
             // 
-            // marginVal
+            // label10
             // 
-            this.marginVal.AutoSize = true;
-            this.marginVal.Font = new System.Drawing.Font("Poppins Medium", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.marginVal.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.marginVal.Location = new System.Drawing.Point(225, 46);
-            this.marginVal.Name = "marginVal";
-            this.marginVal.Size = new System.Drawing.Size(30, 19);
-            this.marginVal.TabIndex = 35;
-            this.marginVal.Text = "20%";
-            this.marginVal.Visible = false;
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(17, 42);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(42, 23);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "Price";
+            // 
+            // price
+            // 
+            this.price.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
+            this.price.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.price.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.price.BorderThickness = 1;
+            this.price.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.price.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.price.ForeColor = System.Drawing.Color.Silver;
+            this.price.isPassword = false;
+            this.price.Location = new System.Drawing.Point(15, 69);
+            this.price.Margin = new System.Windows.Forms.Padding(4);
+            this.price.Name = "price";
+            this.price.Size = new System.Drawing.Size(240, 44);
+            this.price.TabIndex = 27;
+            this.price.Text = "MAD 0.00";
+            this.price.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Poppins Medium", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(10, 13);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(66, 28);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "Pricing";
             // 
             // next
             // 
@@ -529,6 +516,17 @@
             this.firstPanel.Size = new System.Drawing.Size(1131, 657);
             this.firstPanel.TabIndex = 18;
             // 
+            // firstImage
+            // 
+            this.firstImage.Image = ((System.Drawing.Image)(resources.GetObject("firstImage.Image")));
+            this.firstImage.Location = new System.Drawing.Point(14, 45);
+            this.firstImage.Name = "firstImage";
+            this.firstImage.Size = new System.Drawing.Size(546, 189);
+            this.firstImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.firstImage.TabIndex = 27;
+            this.firstImage.TabStop = false;
+            this.firstImage.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // addProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -547,6 +545,7 @@
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.firstPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.firstImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -568,7 +567,6 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox type;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button productImage;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label marginVal;
@@ -585,5 +583,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton next;
         private Bunifu.Framework.UI.BunifuFlatButton discard;
         private System.Windows.Forms.Panel firstPanel;
+        private System.Windows.Forms.PictureBox firstImage;
     }
 }
