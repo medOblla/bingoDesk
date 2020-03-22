@@ -28,3 +28,31 @@ D:\Projects GIT\StoreApp\BingoStore\bin\Debug\Newtonsoft.Json.dll
 D:\Projects GIT\StoreApp\BingoStore\bin\Debug\Newtonsoft.Json.xml
 D:\Projects GIT\StoreApp\BingoStore\obj\Debug\BingoStore.updateProduct02.resources
 D:\Projects GIT\StoreApp\BingoStore\obj\Debug\BingoStore.csproj.CoreCompileInputs.cache
+D:\PFE\DESKTOP\bingoDesk\bin\Debug\BingoStore.exe.config
+D:\PFE\DESKTOP\bingoDesk\bin\Debug\BingoStore.exe
+D:\PFE\DESKTOP\bingoDesk\bin\Debug\BingoStore.pdb
+D:\PFE\DESKTOP\bingoDesk\bin\Debug\LiveCharts.dll
+D:\PFE\DESKTOP\bingoDesk\bin\Debug\LiveCharts.WinForms.dll
+D:\PFE\DESKTOP\bingoDesk\bin\Debug\LiveCharts.Wpf.dll
+D:\PFE\DESKTOP\bingoDesk\bin\Debug\Newtonsoft.Json.dll
+D:\PFE\DESKTOP\bingoDesk\bin\Debug\LiveCharts.pdb
+D:\PFE\DESKTOP\bingoDesk\bin\Debug\LiveCharts.xml
+D:\PFE\DESKTOP\bingoDesk\bin\Debug\LiveCharts.WinForms.pdb
+D:\PFE\DESKTOP\bingoDesk\bin\Debug\LiveCharts.WinForms.xml
+D:\PFE\DESKTOP\bingoDesk\bin\Debug\LiveCharts.Wpf.pdb
+D:\PFE\DESKTOP\bingoDesk\bin\Debug\LiveCharts.Wpf.xml
+D:\PFE\DESKTOP\bingoDesk\bin\Debug\Newtonsoft.Json.xml
+D:\PFE\DESKTOP\bingoDesk\obj\Debug\BingoStore.csprojAssemblyReference.cache
+D:\PFE\DESKTOP\bingoDesk\obj\Debug\BingoStore.addProduct.resources
+D:\PFE\DESKTOP\bingoDesk\obj\Debug\BingoStore.addProduct02.resources
+D:\PFE\DESKTOP\bingoDesk\obj\Debug\BingoStore.Dashboard.resources
+D:\PFE\DESKTOP\bingoDesk\obj\Debug\BingoStore.DashBrd.resources
+D:\PFE\DESKTOP\bingoDesk\obj\Debug\BingoStore.Login.resources
+D:\PFE\DESKTOP\bingoDesk\obj\Debug\BingoStore.Properties.Resources.resources
+D:\PFE\DESKTOP\bingoDesk\obj\Debug\BingoStore.ShowProducts.resources
+D:\PFE\DESKTOP\bingoDesk\obj\Debug\BingoStore.updateProduct.resources
+D:\PFE\DESKTOP\bingoDesk\obj\Debug\BingoStore.updateProduct02.resources
+D:\PFE\DESKTOP\bingoDesk\obj\Debug\BingoStore.csproj.GenerateResource.cache
+D:\PFE\DESKTOP\bingoDesk\obj\Debug\BingoStore.csproj.CopyComplete
+D:\PFE\DESKTOP\bingoDesk\obj\Debug\BingoStore.exe
+D:\PFE\DESKTOP\bingoDesk\obj\Debug\BingoStore.pdb

@@ -18,20 +18,20 @@ namespace BingoStore
         public updateProduct02(FinalProduct product)
         {
             InitializeComponent();
-            productCarrier.product_id = product.product_id;
-            productCarrier.product_title = product.product_title;
-            productCarrier.product_description = product.product_description;
-            productCarrier.product_category = product.product_category;
+            productCarrier.id = product.id;
+            productCarrier.title = product.title;
+            productCarrier.description = product.description;
+            productCarrier.category_id = product.category_id;
             productCarrier.product_brand = product.product_brand;
             productCarrier.product_tags = product.product_tags;
-            productCarrier.product_profit_price = product.product_profit_price;
-            productCarrier.product_compare_to_price = product.product_compare_to_price;
+            productCarrier.price = product.price;
+            productCarrier.old_price = product.old_price;
             productCarrier.cost_per_item = product.cost_per_item;
             productCarrier.product_images = product.product_images;
             sku.Text = product.product_sku;
             barcode.Text = product.product_barcode;
             productQuantity.Text = product.product_quantity.ToString();
-            weight.Text = product.product_wheight.ToString();
+            weight.Text = product.product_weight.ToString();
             height.Text = product.product_height.ToString();
             carrier.Text = product.product_carrier.ToString();
             colors.Text = (product.product_colors != null) ? product.product_colors.ToString() : null;
@@ -41,20 +41,20 @@ namespace BingoStore
         private void save_Click(object sender, EventArgs e)
         {
             FinalProduct product = new FinalProduct();
-            product.product_id = productCarrier.product_id;
-            product.product_title = productCarrier.product_title;
-            product.product_description = productCarrier.product_description;
-            product.product_category = productCarrier.product_category;
+            product.id = productCarrier.id;
+            product.title = productCarrier.title;
+            product.description = productCarrier.description;
+            product.category_id = productCarrier.category_id;
             product.product_brand = productCarrier.product_brand;
             product.product_tags = productCarrier.product_tags;
-            product.product_profit_price = productCarrier.product_profit_price;
-            product.product_compare_to_price = productCarrier.product_compare_to_price;
+            product.price = productCarrier.price;
+            product.old_price = productCarrier.old_price;
             product.cost_per_item = productCarrier.cost_per_item;
             product.product_images = productCarrier.product_images;
             product.product_sku = sku.Text;
             product.product_barcode = barcode.Text;
             product.product_quantity = int.Parse(productQuantity.Text);
-            product.product_wheight = double.Parse(weight.Text);
+            product.product_weight = double.Parse(weight.Text);
             product.product_height = double.Parse(height.Text);
             product.product_carrier = carrier.selectedValue.ToString();
             product.product_size = (sizes.Text != null) ? "null" : sizes.Text;

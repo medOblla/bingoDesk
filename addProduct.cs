@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using BingoStore.Models;
 using System.IO;
 using Newtonsoft.Json;
+using BingoStore.APIs;
 
 namespace BingoStore
 {
@@ -18,20 +19,21 @@ namespace BingoStore
         public addProduct()
         {
             InitializeComponent();
+            List<Category> cates = Product.Categories();
         }
         FinalProduct product = new FinalProduct();
-
+        
         private void next_Click(object sender, EventArgs e)
         {
             
-            product.product_title = title.Text;
-            product.product_description = description.Text;
-            product.product_category = category.Text;
-            product.product_brand = brand.Text;
+            product.title = title.Text;
+            product.description = description.Text;
+            product.category_id = category.selectedIndex.ToString();
+            product.product_brand = brand.selectedValue.ToString();
             product.product_tags = tags.Text;
-            product.product_gender = gender.Text;
-            product.product_profit_price = double.Parse(price.Text);
-            product.product_compare_to_price = double.Parse(compareToPrice.Text);
+            product.product_gender = gender.selectedValue.ToString();
+            product.price = double.Parse(price.Text);
+            product.old_price = double.Parse(compareToPrice.Text);
             product.cost_per_item = double.Parse(costPerItem.Text);
             addProduct02 d1 = new addProduct02(product);
             MainControlClass.showControl(d1, this);
@@ -91,6 +93,86 @@ namespace BingoStore
         private string GetTimestamp(DateTime value)
         {
             return value.ToString("yyyyMMddHHmmssffff");
+        }
+
+        private void addProduct_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void category_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void category_onItemSelected(object sender, EventArgs e)
+        {
+
+        }
+
+        private void firstPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void bunifuDropdown1_onItemSelected(object sender, EventArgs e)
+        {
+
+        }
+
+        private void price_OnValueChanged(object sender, EventArgs e)
+        {
+
+        }
+        public bool flag = false;
+        public int counter = 0;
+        private void price_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (price.Text.Contains('.')) flag = true; else flag = false;
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.') )
+            {
+                counter++;
+               
+                if (counter > 1 && flag) e.Handled = true;
+            }
+        }
+
+        public bool flag1 = false;
+        public int counter1 = 0;
+        private void compareToPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (compareToPrice.Text.Contains('.')) flag1 = true; else flag1 = false;
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.'))
+            {
+                counter1++;
+
+                if (counter1 > 1 && flag1) e.Handled = true;
+            }
+        }
+        
+            public bool flag2 = false;
+        public int counter2 = 0;
+        private void costPerItem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (costPerItem.Text.Contains('.')) flag2 = true; else flag2 = false;
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.'))
+            {
+                counter2++;
+
+                if (counter2 > 1 && flag2) e.Handled = true;
+            }
         }
     }
 }

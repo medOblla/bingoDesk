@@ -44,7 +44,7 @@ namespace BingoStore
                 Label categories = new Label();
                 Label separator = new Label();
                 Label brands = new Label();
-                Button hide_product = new Button();
+                Button hide_product = new Button() ;
                 Button edit_product = new Button();
                 Button delete_product = new Button();
                 // 
@@ -69,7 +69,7 @@ namespace BingoStore
                 productPic.TabIndex = 27;
                 productPic.SizeMode = PictureBoxSizeMode.StretchImage;
                 productPic.TabStop = false;
-                productPic.ImageLocation = "C:/Users/sparo/Desktop/trial.jpeg";//product.product_images[1];
+                productPic.ImageLocation = "C:/Users/oussama ouardini/Desktop/newsletter.png";//product.product_images[1];
                 // 
                 // productTitle
                 // 
@@ -79,7 +79,7 @@ namespace BingoStore
                 product_title.ForeColor = Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
                 product_title.Name = "productTitle";
                 item_inStock.Size = new Size(18, 23);
-                product_title.Text = product.product_title; // it should show something here
+                product_title.Text = product.title; // it should show something here
                 // 
                 // itemsInStock
                 // 
@@ -132,12 +132,12 @@ namespace BingoStore
                 hide_product.FlatAppearance.MouseDownBackColor = Color.White;
                 hide_product.FlatAppearance.MouseOverBackColor = Color.White;
                 hide_product.FlatStyle = FlatStyle.Flat;
-                hide_product.BackgroundImage = Image.FromFile(@"D:\Projects GIT\StoreApp\BingoStore\assets\hide01.png");
+                hide_product.BackgroundImage = Image.FromFile(@"D:\PFE\DESKTOP\bingoDesk\assets\hide01.png");
                 hide_product.Location = new Point(910, y);
                 hide_product.Name = "hide";
                 hide_product.Size = new Size(24, 24);
                 hide_product.TabIndex = 38;
-                hide_product.UseVisualStyleBackColor = true;
+                hide_product.UseVisualStyleBackColor = true; 
                 // 
                 // edit
                 // 
@@ -146,7 +146,7 @@ namespace BingoStore
                 edit_product.FlatAppearance.MouseDownBackColor = Color.White;
                 edit_product.FlatAppearance.MouseOverBackColor = Color.White;
                 edit_product.FlatStyle = FlatStyle.Flat;
-                edit_product.BackgroundImage = Image.FromFile(@"D:\Projects GIT\StoreApp\BingoStore\assets\gear01.png");
+                edit_product.BackgroundImage = Image.FromFile(@"D:\PFE\DESKTOP\bingoDesk\assets\gear01.png");
                 edit_product.Location = new Point(940, y);
                 edit_product.Name = "edit";
                 edit_product.Size = new Size(24, 27);
@@ -160,7 +160,7 @@ namespace BingoStore
                 delete_product.FlatAppearance.MouseDownBackColor = Color.White;
                 delete_product.FlatAppearance.MouseOverBackColor = Color.White;
                 delete_product.FlatStyle = FlatStyle.Flat;
-                delete_product.BackgroundImage = Image.FromFile(@"D:\Projects GIT\StoreApp\BingoStore\assets\trash01.png");
+                delete_product.BackgroundImage = Image.FromFile(@"D:\PFE\DESKTOP\bingoDesk\assets\trash01.png");
                 delete_product.Location = new Point(970, y);
                 delete_product.Name = "delete";
                 delete_product.Size = new Size(24, 24);
@@ -194,31 +194,11 @@ namespace BingoStore
                 scrollable.HorizontalScroll.Visible = false;
                 scrollable.HorizontalScroll.Maximum = 0;
                 scrollable.AutoScroll = true;
-
-                delete_product.Click += Delete_product_Click(sender, e, product.product_id);
-                hide_product.Click += Hide_product_Click(sender, e, product.product_id);
-                edit_product.Click += Edit_product_Click(sender, e, product);
+                hide_product.Click += (snd, EventArgs) => { Product.Hide_product(product.id); };
+                delete_product.Click += (snd, EventArgs) => { Product.Delete_product(product.id); };
+                edit_product.Click += (snd, EventArgs) => { updateProduct update = new updateProduct(product); MainControlClass.showControl(update, this); };
             }
 
-        }
-
-        private EventHandler Edit_product_Click(Object sender, EventArgs e, FinalProduct product)
-        {
-            updateProduct update = new updateProduct(product);
-            MainControlClass.showControl(update, this);
-            return null;
-        }
-
-        private EventHandler Hide_product_Click(object sender, EventArgs e, int product_id)
-        {
-            Product.Hide_product(product_id);
-            return null;
-        }
-
-        private EventHandler Delete_product_Click(object sender, EventArgs e, int product_id)
-        {
-            Product.Delete_product(product_id);
-            return null;
         }
 
         private void site_Click(object sender, EventArgs e)

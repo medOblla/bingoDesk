@@ -107,9 +107,11 @@
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="MainControlClass.cs" />
+    <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Comments.cs" />
     <Compile Include="Models\FinalProduct.cs" />
     <Compile Include="Models\ProductCls.cs" />
+    <Compile Include="Models\Statistics.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShowProducts.cs">

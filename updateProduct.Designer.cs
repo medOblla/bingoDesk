@@ -48,19 +48,21 @@
             this.firstImage = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
-            this.tags = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.brand = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.type = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.description = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.title = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.category = new Bunifu.Framework.UI.BunifuDropdown();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tags = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.gender = new Bunifu.Framework.UI.BunifuDropdown();
+            this.brand = new Bunifu.Framework.UI.BunifuDropdown();
             this.firstPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -115,7 +117,7 @@
             this.discard.Text = "Discard";
             this.discard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.discard.Textcolor = System.Drawing.Color.Black;
-            this.discard.TextFont = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.discard.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.discard.Click += new System.EventHandler(this.discard_Click);
             // 
             // next
@@ -151,7 +153,8 @@
             this.next.Text = "Next";
             this.next.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.next.Textcolor = System.Drawing.Color.White;
-            this.next.TextFont = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.next.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.next.Click += new System.EventHandler(this.next_Click_1);
             // 
             // panel5
             // 
@@ -176,11 +179,11 @@
             // marginVal
             // 
             this.marginVal.AutoSize = true;
-            this.marginVal.Font = new System.Drawing.Font("Poppins Medium", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.marginVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.marginVal.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.marginVal.Location = new System.Drawing.Point(225, 46);
             this.marginVal.Name = "marginVal";
-            this.marginVal.Size = new System.Drawing.Size(30, 19);
+            this.marginVal.Size = new System.Drawing.Size(27, 13);
             this.marginVal.TabIndex = 35;
             this.marginVal.Text = "20%";
             this.marginVal.Visible = false;
@@ -188,11 +191,11 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Gray;
             this.label13.Location = new System.Drawing.Point(44, 211);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(173, 22);
+            this.label13.Size = new System.Drawing.Size(149, 15);
             this.label13.TabIndex = 34;
             this.label13.Text = "Charge tax on this prodcut";
             // 
@@ -211,10 +214,10 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(17, 127);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(97, 23);
+            this.label12.Size = new System.Drawing.Size(86, 16);
             this.label12.TabIndex = 32;
             this.label12.Text = "Cost per item";
             // 
@@ -239,10 +242,10 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(271, 42);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(124, 23);
+            this.label11.Size = new System.Drawing.Size(111, 16);
             this.label11.TabIndex = 30;
             this.label11.Text = "Compare to price";
             // 
@@ -267,11 +270,11 @@
             // margin
             // 
             this.margin.AutoSize = true;
-            this.margin.Font = new System.Drawing.Font("Poppins Medium", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.margin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.margin.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.margin.Location = new System.Drawing.Point(167, 45);
             this.margin.Name = "margin";
-            this.margin.Size = new System.Drawing.Size(55, 19);
+            this.margin.Size = new System.Drawing.Size(48, 13);
             this.margin.TabIndex = 28;
             this.margin.Text = "Margin : ";
             this.margin.Visible = false;
@@ -279,10 +282,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(17, 42);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(42, 23);
+            this.label10.Size = new System.Drawing.Size(39, 16);
             this.label10.TabIndex = 28;
             this.label10.Text = "Price";
             // 
@@ -303,14 +306,15 @@
             this.price.TabIndex = 27;
             this.price.Text = "MAD 0.00";
             this.price.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.price_KeyPress);
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Poppins Medium", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(10, 13);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(66, 28);
+            this.label9.Size = new System.Drawing.Size(56, 20);
             this.label9.TabIndex = 26;
             this.label9.Text = "Pricing";
             // 
@@ -339,10 +343,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Poppins Medium", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(9, 13);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(73, 28);
+            this.label8.Size = new System.Drawing.Size(62, 20);
             this.label8.TabIndex = 26;
             this.label8.Text = "Images";
             // 
@@ -350,111 +354,19 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.brand);
+            this.panel2.Controls.Add(this.gender);
+            this.panel2.Controls.Add(this.category);
+            this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.tags);
             this.panel2.Controls.Add(this.label6);
-            this.panel2.Controls.Add(this.brand);
             this.panel2.Controls.Add(this.label5);
-            this.panel2.Controls.Add(this.type);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Location = new System.Drawing.Point(612, 13);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(517, 294);
             this.panel2.TabIndex = 26;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Poppins Medium", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(10, 7);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(115, 28);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "Organization";
-            // 
-            // tags
-            // 
-            this.tags.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
-            this.tags.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tags.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tags.BorderThickness = 1;
-            this.tags.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.tags.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.tags.ForeColor = System.Drawing.Color.Silver;
-            this.tags.isPassword = false;
-            this.tags.Location = new System.Drawing.Point(17, 226);
-            this.tags.Margin = new System.Windows.Forms.Padding(4);
-            this.tags.Name = "tags";
-            this.tags.Size = new System.Drawing.Size(337, 44);
-            this.tags.TabIndex = 24;
-            this.tags.Text = "summer, footbal, men";
-            this.tags.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(13, 202);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(42, 23);
-            this.label6.TabIndex = 23;
-            this.label6.Text = "Tags";
-            // 
-            // brand
-            // 
-            this.brand.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
-            this.brand.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.brand.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.brand.BorderThickness = 1;
-            this.brand.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.brand.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.brand.ForeColor = System.Drawing.Color.Silver;
-            this.brand.isPassword = false;
-            this.brand.Location = new System.Drawing.Point(17, 144);
-            this.brand.Margin = new System.Windows.Forms.Padding(4);
-            this.brand.Name = "brand";
-            this.brand.Size = new System.Drawing.Size(337, 44);
-            this.brand.TabIndex = 24;
-            this.brand.Text = "e.g. Nike";
-            this.brand.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(13, 120);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 23);
-            this.label5.TabIndex = 23;
-            this.label5.Text = "Brand";
-            // 
-            // type
-            // 
-            this.type.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
-            this.type.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.type.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.type.BorderThickness = 1;
-            this.type.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.type.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.type.ForeColor = System.Drawing.Color.Silver;
-            this.type.isPassword = false;
-            this.type.Location = new System.Drawing.Point(17, 65);
-            this.type.Margin = new System.Windows.Forms.Padding(4);
-            this.type.Name = "type";
-            this.type.Size = new System.Drawing.Size(337, 44);
-            this.type.TabIndex = 24;
-            this.type.Text = "e.g. Shirts";
-            this.type.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 41);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(96, 23);
-            this.label4.TabIndex = 23;
-            this.label4.Text = "Product Type";
             // 
             // panel4
             // 
@@ -481,10 +393,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(10, 86);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 23);
+            this.label3.Size = new System.Drawing.Size(76, 16);
             this.label3.TabIndex = 23;
             this.label3.Text = "Description";
             // 
@@ -509,22 +421,178 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(10, 7);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(36, 23);
+            this.label2.Size = new System.Drawing.Size(34, 16);
             this.label2.TabIndex = 18;
             this.label2.Text = "Title";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Poppins Medium", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(15, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(125, 42);
+            this.label1.Size = new System.Drawing.Size(108, 29);
             this.label1.TabIndex = 19;
             this.label1.Text = "Products";
+            // 
+            // category
+            // 
+            this.category.BackColor = System.Drawing.Color.Transparent;
+            this.category.BorderRadius = 3;
+            this.category.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.category.ForeColor = System.Drawing.Color.Black;
+            this.category.Items = new string[] {
+        "Running",
+        "Hicking",
+        "Football ",
+        "Tennis",
+        "Fishing",
+        "Cardio",
+        "Swimming",
+        "Surfing",
+        "menSweater",
+        "menFootwar",
+        "menPants",
+        "menT-Shirts",
+        "menSneakers",
+        "womenSweater",
+        "womenFootwar",
+        "womenPants",
+        "womenT-Shirts",
+        "womenSneakers",
+        "childSweater",
+        "childFootwar",
+        "childPants",
+        "childT-Shirts",
+        "childSneakers",
+        "Adidas",
+        "Nike",
+        "Puma",
+        "Reebook",
+        "SHIRTS",
+        "SNEAKERS",
+        "HOODIES",
+        "PANTS",
+        "ACCESORIES",
+        ""};
+            this.category.Location = new System.Drawing.Point(23, 73);
+            this.category.Name = "category";
+            this.category.NomalColor = System.Drawing.Color.White;
+            this.category.onHoverColor = System.Drawing.Color.White;
+            this.category.selectedIndex = 0;
+            this.category.Size = new System.Drawing.Size(217, 44);
+            this.category.TabIndex = 37;
+            this.category.onItemSelected += new System.EventHandler(this.category_onItemSelected);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(249, 49);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(102, 16);
+            this.label14.TabIndex = 35;
+            this.label14.Text = "Product Gender";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(13, 15);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(99, 20);
+            this.label7.TabIndex = 34;
+            this.label7.Text = "Organization";
+            // 
+            // tags
+            // 
+            this.tags.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
+            this.tags.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tags.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tags.BorderThickness = 1;
+            this.tags.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.tags.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.tags.ForeColor = System.Drawing.Color.Silver;
+            this.tags.isPassword = false;
+            this.tags.Location = new System.Drawing.Point(20, 234);
+            this.tags.Margin = new System.Windows.Forms.Padding(4);
+            this.tags.Name = "tags";
+            this.tags.Size = new System.Drawing.Size(482, 44);
+            this.tags.TabIndex = 32;
+            this.tags.Text = "summer, footbal, men";
+            this.tags.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(16, 210);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 16);
+            this.label6.TabIndex = 29;
+            this.label6.Text = "Tags";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(16, 128);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(44, 16);
+            this.label5.TabIndex = 30;
+            this.label5.Text = "Brand";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(16, 49);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 16);
+            this.label4.TabIndex = 31;
+            this.label4.Text = "Product Category";
+            // 
+            // gender
+            // 
+            this.gender.BackColor = System.Drawing.Color.Transparent;
+            this.gender.BorderRadius = 3;
+            this.gender.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gender.ForeColor = System.Drawing.Color.Black;
+            this.gender.Items = new string[] {
+        "Man ",
+        "Woman ",
+        "Child"};
+            this.gender.Location = new System.Drawing.Point(269, 73);
+            this.gender.Name = "gender";
+            this.gender.NomalColor = System.Drawing.Color.White;
+            this.gender.onHoverColor = System.Drawing.Color.White;
+            this.gender.selectedIndex = 0;
+            this.gender.Size = new System.Drawing.Size(217, 44);
+            this.gender.TabIndex = 38;
+            // 
+            // brand
+            // 
+            this.brand.BackColor = System.Drawing.Color.Transparent;
+            this.brand.BorderRadius = 3;
+            this.brand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.brand.ForeColor = System.Drawing.Color.Black;
+            this.brand.Items = new string[] {
+        "Nike",
+        "Addidas",
+        "Puma",
+        "Reebok",
+        "NewBalance",
+        "Rip Curl"};
+            this.brand.Location = new System.Drawing.Point(19, 147);
+            this.brand.Name = "brand";
+            this.brand.NomalColor = System.Drawing.Color.White;
+            this.brand.onHoverColor = System.Drawing.Color.White;
+            this.brand.selectedIndex = 0;
+            this.brand.Size = new System.Drawing.Size(471, 44);
+            this.brand.TabIndex = 41;
             // 
             // updateProduct
             // 
@@ -571,18 +639,20 @@
         private System.Windows.Forms.PictureBox firstImage;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label7;
-        private Bunifu.Framework.UI.BunifuMetroTextbox tags;
-        private System.Windows.Forms.Label label6;
-        private Bunifu.Framework.UI.BunifuMetroTextbox brand;
-        private System.Windows.Forms.Label label5;
-        private Bunifu.Framework.UI.BunifuMetroTextbox type;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.RichTextBox description;
         private System.Windows.Forms.Label label3;
         private Bunifu.Framework.UI.BunifuMetroTextbox title;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private Bunifu.Framework.UI.BunifuDropdown category;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label7;
+        private Bunifu.Framework.UI.BunifuMetroTextbox tags;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private Bunifu.Framework.UI.BunifuDropdown gender;
+        private Bunifu.Framework.UI.BunifuDropdown brand;
     }
 }
