@@ -45,7 +45,7 @@
             this.price = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.productImage = new System.Windows.Forms.Button();
+            this.firstImage = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
@@ -64,6 +64,7 @@
             this.firstPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.firstImage)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -115,6 +116,7 @@
             this.discard.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.discard.Textcolor = System.Drawing.Color.Black;
             this.discard.TextFont = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.discard.Click += new System.EventHandler(this.discard_Click);
             // 
             // next
             // 
@@ -150,7 +152,6 @@
             this.next.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.next.Textcolor = System.Drawing.Color.White;
             this.next.TextFont = new System.Drawing.Font("Poppins", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.next.Click += new System.EventHandler(this.next_Click);
             // 
             // panel5
             // 
@@ -317,26 +318,23 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.productImage);
+            this.panel3.Controls.Add(this.firstImage);
             this.panel3.Controls.Add(this.label8);
             this.panel3.Location = new System.Drawing.Point(13, 323);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(574, 245);
             this.panel3.TabIndex = 27;
             // 
-            // productImage
+            // firstImage
             // 
-            this.productImage.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.productImage.FlatAppearance.BorderSize = 0;
-            this.productImage.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.productImage.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.productImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.productImage.Image = ((System.Drawing.Image)(resources.GetObject("productImage.Image")));
-            this.productImage.Location = new System.Drawing.Point(14, 42);
-            this.productImage.Name = "productImage";
-            this.productImage.Size = new System.Drawing.Size(546, 189);
-            this.productImage.TabIndex = 39;
-            this.productImage.UseVisualStyleBackColor = true;
+            this.firstImage.Image = ((System.Drawing.Image)(resources.GetObject("firstImage.Image")));
+            this.firstImage.Location = new System.Drawing.Point(14, 45);
+            this.firstImage.Name = "firstImage";
+            this.firstImage.Size = new System.Drawing.Size(546, 189);
+            this.firstImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.firstImage.TabIndex = 27;
+            this.firstImage.TabStop = false;
+            this.firstImage.Click += new System.EventHandler(this.firstImage_Click);
             // 
             // label8
             // 
@@ -542,6 +540,7 @@
             this.panel5.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.firstImage)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -569,7 +568,7 @@
         private Bunifu.Framework.UI.BunifuMetroTextbox price;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button productImage;
+        private System.Windows.Forms.PictureBox firstImage;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label7;

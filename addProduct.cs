@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BingoStore.Models;
 using System.IO;
+using Newtonsoft.Json;
 
 namespace BingoStore
 {
@@ -25,8 +26,10 @@ namespace BingoStore
             
             product.product_title = title.Text;
             product.product_description = description.Text;
-            product.product_category = type.Text;
+            product.product_category = category.Text;
             product.product_brand = brand.Text;
+            product.product_tags = tags.Text;
+            product.product_gender = gender.Text;
             product.product_profit_price = double.Parse(price.Text);
             product.product_compare_to_price = double.Parse(compareToPrice.Text);
             product.cost_per_item = double.Parse(costPerItem.Text);
@@ -43,22 +46,51 @@ namespace BingoStore
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            string firstImg = " ";
             try
             {
-                OpenFileDialog dialog = new OpenFileDialog();
-                dialog.Filter = "jpg files(*.jpg)|*jpg| PNG files(*.png)|*.png| All Files(*.*)|*.*|";
-                if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+                using(var fbd = new FolderBrowserDialog())
                 {
-                    product.product_images = dialog.FileName;
-                    DirectoryInfo uploadedFile = new DirectoryInfo(dialog.FileName);
-                    var frontImage = uploadedFile.EnumerateFiles().Select(f => f.Name).FirstOrDefault();
-                    firstImage.Image = Image.FromFile(frontImage);
+                    DialogResult result = fbd.ShowDialog();
+                    if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                    {
+                        string sourcePath = fbd.SelectedPath.ToString();
+                        string targetPath = @"C:\xampp\htdocs\Bng\bingoFinal\public\productImages\";
+                        if (!Directory.Exists(targetPath))
+                        {
+                            Directory.CreateDirectory(targetPath);
+                        }
+                        string[] sourceFiles = Directory.GetFiles(sourcePath);
+                        List<string> newDir = new List<string>();
+                        foreach(string sourceFile in sourceFiles)
+                        {
+                            string fileName = Path.GetFileName(sourceFile);
+                            string destFile = Path.Combine(targetPath, Path.GetFileNameWithoutExtension(fileName) + GetTimestamp(DateTime.Now) + Path.GetExtension(fileName));
+                            firstImg = Path.Combine(targetPath,Path.GetFileName(destFile));
+                            File.Move(sourceFile, destFile);
+                            newDir.Add(Path.GetFileName(destFile).ToString());
+                            Console.WriteLine("---------------------------");
+
+                            Console.WriteLine(firstImg);
+
+                        }
+                        string jsonImages = JsonConvert.SerializeObject(newDir);
+                        product.product_images = jsonImages;
+                        Console.WriteLine(jsonImages);
+                        Console.WriteLine(newDir.ElementAt(0));
+                        firstImage.Image = Image.FromFile(firstImg);
+                    }
                 }
             }
-            catch (Exception)
+            catch (Exception io)
             {
-                MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(io.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private string GetTimestamp(DateTime value)
+        {
+            return value.ToString("yyyyMMddHHmmssffff");
         }
     }
 }

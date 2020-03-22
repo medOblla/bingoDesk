@@ -24,3 +24,7 @@ D:\Projects GIT\StoreApp\BingoStore\obj\Debug\BingoStore.csprojAssemblyReference
 D:\Projects GIT\StoreApp\BingoStore\obj\Debug\BingoStore.addProduct02.resources
 D:\Projects GIT\StoreApp\BingoStore\obj\Debug\BingoStore.Login.resources
 D:\Projects GIT\StoreApp\BingoStore\obj\Debug\BingoStore.updateProduct.resources
+D:\Projects GIT\StoreApp\BingoStore\bin\Debug\Newtonsoft.Json.dll
+D:\Projects GIT\StoreApp\BingoStore\bin\Debug\Newtonsoft.Json.xml
+D:\Projects GIT\StoreApp\BingoStore\obj\Debug\BingoStore.updateProduct02.resources
+D:\Projects GIT\StoreApp\BingoStore\obj\Debug\BingoStore.csproj.CoreCompileInputs.cache

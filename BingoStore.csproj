@@ -48,6 +48,9 @@
     <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
       <HintPath>packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
@@ -121,6 +124,12 @@
     <Compile Include="updateProduct.Designer.cs">
       <DependentUpon>updateProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="updateProduct02.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="updateProduct02.Designer.cs">
+      <DependentUpon>updateProduct02.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="addProduct.resx">
       <DependentUpon>addProduct.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +159,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="updateProduct.resx">
       <DependentUpon>updateProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="updateProduct02.resx">
+      <DependentUpon>updateProduct02.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

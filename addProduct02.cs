@@ -28,25 +28,12 @@ namespace BingoStore
             carrierProduct.product_category = product.product_category;
             carrierProduct.product_brand = product.product_brand;
             carrierProduct.product_tags = product.product_tags;
+            carrierProduct.product_gender = product.product_gender;
             carrierProduct.product_profit_price = product.product_profit_price;
             carrierProduct.product_compare_to_price = product.product_compare_to_price;
             carrierProduct.cost_per_item = product.cost_per_item;
             carrierProduct.product_images = product.product_images;
-            sku.Text = product.product_sku;
-            barcode.Text = product.product_barcode;
-            productQuantity.Text = product.product_quantity.ToString();
-            weight.Text = product.product_wheight.ToString();
-            height.Text = product.product_height.ToString();
-          
-            if(product.product_size != null)
-            {
-                sizes.Text = product.product_size;
-            }
-            if(product.product_colors != null)
-            {
-                colors.Text = product.product_colors;
-            }
-
+   
         }
 
         private void back_Click(object sender, EventArgs e)
@@ -64,6 +51,7 @@ namespace BingoStore
             product.product_category = carrierProduct.product_category;
             product.product_brand = carrierProduct.product_brand;
             product.product_tags = carrierProduct.product_tags;
+            product.product_gender = carrierProduct.product_gender;
             product.product_profit_price = carrierProduct.product_profit_price;
             product.product_compare_to_price = carrierProduct.product_compare_to_price;
             product.cost_per_item = carrierProduct.cost_per_item;
@@ -74,9 +62,10 @@ namespace BingoStore
             product.product_wheight = double.Parse(weight.Text);
             product.product_height = double.Parse(height.Text);
             product.product_carrier = carrier.selectedValue.ToString();
-            product.product_size = (sizes.Text != null) ? "null" : sizes.Text;
-            product.product_colors = (colors.Text != null) ? "null" : colors.Text;
-            Product.Edit_product(product);
+            product.product_size = sizes.Text;
+            product.product_colors = colors.Text;
+            Product.Add_Product(product);
+            MessageBox.Show("Succesfully Inserted !");
         }
     }
 }

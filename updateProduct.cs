@@ -8,12 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BingoStore.Models;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace BingoStore
 {
     public partial class updateProduct : UserControl
     {   public FinalProduct carrier = new FinalProduct();
        
+        
+        public updateProduct()
+        {
+            InitializeComponent();
+        }
         public updateProduct(FinalProduct product)
         {
             InitializeComponent();
@@ -25,8 +32,9 @@ namespace BingoStore
             price.Text = product.product_profit_price.ToString();
             compareToPrice.Text = product.product_compare_to_price.ToString();
             costPerItem.Text = product.cost_per_item.ToString();
-            carrier.product_images = product.product_images;
+            
             carrier.product_id = product.product_id;
+            carrier.product_images = product.product_images;
             carrier.product_sku = product.product_sku;
             carrier.product_barcode = product.product_barcode;
             carrier.product_quantity = product.product_quantity;
@@ -51,9 +59,39 @@ namespace BingoStore
             product.product_quantity = carrier.product_quantity;
             product.product_wheight = carrier.product_wheight;
             product.product_height = carrier.product_height;
-            addProduct02 nextStep = new addProduct02(product);
+            updateProduct02 nextStep = new updateProduct02(product);
             MainControlClass.showControl(nextStep, this);
 
+        }
+
+
+
+        private void firstImage_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (var fbd = new FolderBrowserDialog())
+                {
+                    DialogResult result = fbd.ShowDialog();
+                    if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
+                    {
+                        string[] files = Directory.GetFiles(fbd.SelectedPath);
+                        string jsonImages = JsonConvert.SerializeObject(files);
+                        carrier.product_images = jsonImages;
+                        firstImage.Image = Image.FromFile(files[0]);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("An Error Occured", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void discard_Click(object sender, EventArgs e)
+        {
+            DashBrd d1 = new DashBrd();
+            MainControlClass.showControl(d1, this);
         }
     }
 }

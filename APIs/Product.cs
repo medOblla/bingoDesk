@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.IO;
 using BingoStore.Models;
+using Newtonsoft.Json;
 
 namespace BingoStore.APIs
 {
@@ -38,7 +39,7 @@ namespace BingoStore.APIs
             {
                 {"product_title", product.product_title },
                 {"product_description", product.product_description },
-                {"product_images", product.product_images },
+                {"product_images", product.product_images},
                 {"product_category", product.product_category },
                 {"gender", product.product_gender},
                 {"product_brand", product.product_brand},
@@ -54,10 +55,33 @@ namespace BingoStore.APIs
                 {"product_height", product.product_height.ToString()},
                 {"product_carrier", product.product_carrier},
                 {"product_size", product.product_size},
-                {"product_colors", product.product_colors},
+                {"product_colors", product.product_colors}
             };
+            Console.WriteLine(product.product_title);
+            Console.WriteLine(product.product_description);
+            Console.WriteLine(product.product_images);
+            Console.WriteLine(product.product_category);
+            Console.WriteLine(product.product_gender);
+            Console.WriteLine(product.product_brand);
+            Console.WriteLine(product.product_tags);
+            Console.WriteLine(product.product_profit_price.ToString());
+            Console.WriteLine(product.product_compare_to_price.ToString());
+            Console.WriteLine(product.cost_per_item.ToString());
+            Console.WriteLine(product.profit_calcul(product.cost_per_item, product.product_profit_price).ToString());
+            Console.WriteLine(product.product_barcode);
+            Console.WriteLine(product.product_sku);
+            Console.WriteLine(product.product_quantity.ToString());
+            Console.WriteLine(product.product_wheight.ToString());
+            Console.WriteLine(product.product_height.ToString());
+            Console.WriteLine(product.product_carrier);
+            Console.WriteLine(product.product_size);
+            Console.WriteLine(product.product_colors);
             var content = new FormUrlEncodedContent(updated_values);
-            var response = await client.PostAsync($"http://127.0.0.1:8000/api/addProduct", content);
+            var response = await client.PostAsync("http://127.0.0.1:8000/api/addProduct", content);
+            Console.WriteLine(JsonConvert.SerializeObject(content));
+            Console.WriteLine("----------------------------------------------");
+            Console.WriteLine(response);
+            Console.WriteLine("----------------------------------------------");
 
         }
 
@@ -93,7 +117,7 @@ namespace BingoStore.APIs
                 {"product_height", product.product_height.ToString()},
                 {"product_carrier", product.product_carrier},
                 {"product_size", product.product_size},
-                {"product_colors", product.product_colors},
+                {"product_colors", product.product_colors}
             };
             var content = new FormUrlEncodedContent(updated_values);
             var response = await client.PostAsync($"http://127.0.0.1:8000/api/editProduct/{product.product_id}", content);
