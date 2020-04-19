@@ -27,16 +27,27 @@ namespace BingoStore
 
             chart1.Series["inventory"].IsValueShownAsLabel = false;
             chart1.Series["inventory"].IsVisibleInLegend = false;
-            chart1.Series["inventory"].Points.AddXY(" ", "10");
-            chart1.Series["inventory"].Points.AddXY(" ", "30");
-            chart1.Series["inventory"].Points.AddXY(" ", "40");
-            chart1.Series["inventory"].Points.AddXY(" ", "20");
+            chart1.Series["inventory"].Points.AddXY(" ", myStats.access.ToString());
+            chart1.Series["inventory"].Points.AddXY(" ", myStats.men.ToString());
+            chart1.Series["inventory"].Points.AddXY(" ", myStats.women.ToString());
+            chart1.Series["inventory"].Points.AddXY(" ", myStats.kids.ToString());
 
             chart1.Series["inventory"].Points[0].Color = Color.FromArgb(25, 218, 221);
             chart1.Series["inventory"].Points[1].Color = Color.FromArgb(249, 165, 48);
             chart1.Series["inventory"].Points[2].Color = Color.FromArgb(253, 166, 225);
             chart1.Series["inventory"].Points[3].Color = Color.FromArgb(124, 146, 250);
-            
+
+            string[] row = {"Adiddas Phantom","30", "40", "10", "120" };
+            detailsTable.Rows.Add(row);
+            row = new[] { "Nike Phantom", "50", "40", "-10", "140" };
+            detailsTable.Rows.Add(row);
+            row = new[] { "Adiddas ACE", "30", "50", "20", "120" };
+            detailsTable.Rows.Add(row);
+            row = new[] { "Nike Balenciaga", "10", "30", "20", "200" };
+            detailsTable.Rows.Add(row);
+            row = new[] { "Adiddas Predator", "30", "40", "10", "250" };
+            detailsTable.Rows.Add(row);
+        
         }
 
         private void DashBrd_Load(object sender, EventArgs e)

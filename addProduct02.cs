@@ -62,6 +62,18 @@ namespace BingoStore
             product.product_weight = double.Parse(weight.Text);
             product.product_height = double.Parse(height.Text);
             product.product_carrier = carrier.selectedValue.ToString();
+            if(localStore.Checked && localWeb.Checked)
+            {
+                product.local = "WebnStore";
+            }
+            else if(localWeb.Checked && !localStore.Checked)
+            {
+                product.local = "Web";
+            }
+            else if(!localWeb.Checked && localStore.Checked)
+            {
+                product.local = "Store";
+            }
             product.product_size = sizes.Text;
             product.product_colors = colors.Text;
             Product.Add_Product(product);

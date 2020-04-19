@@ -66,15 +66,23 @@
             this.haveOptions = new Bunifu.Framework.UI.BunifuCheckbox();
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.labl87 = new System.Windows.Forms.Label();
+            this.localWeb = new Bunifu.Framework.UI.BunifuCheckbox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.labe88 = new System.Windows.Forms.Label();
+            this.localStore = new Bunifu.Framework.UI.BunifuCheckbox();
             this.firstPanel.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.optionsPanel.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // firstPanel
             // 
+            this.firstPanel.Controls.Add(this.panel3);
             this.firstPanel.Controls.Add(this.panel4);
             this.firstPanel.Controls.Add(this.save);
             this.firstPanel.Controls.Add(this.back);
@@ -460,9 +468,9 @@
             this.optionsPanel.Controls.Add(this.sizes);
             this.optionsPanel.Controls.Add(this.remove01);
             this.optionsPanel.Controls.Add(this.label2);
-            this.optionsPanel.Location = new System.Drawing.Point(568, 87);
+            this.optionsPanel.Location = new System.Drawing.Point(568, 186);
             this.optionsPanel.Name = "optionsPanel";
-            this.optionsPanel.Size = new System.Drawing.Size(556, 497);
+            this.optionsPanel.Size = new System.Drawing.Size(556, 398);
             this.optionsPanel.TabIndex = 31;
             // 
             // label10
@@ -608,6 +616,76 @@
             this.label1.TabIndex = 19;
             this.label1.Text = "Products";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel3.Controls.Add(this.labe88);
+            this.panel3.Controls.Add(this.localStore);
+            this.panel3.Controls.Add(this.labl87);
+            this.panel3.Controls.Add(this.localWeb);
+            this.panel3.Controls.Add(this.label21);
+            this.panel3.Location = new System.Drawing.Point(568, 96);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(556, 84);
+            this.panel3.TabIndex = 35;
+            // 
+            // labl87
+            // 
+            this.labl87.AutoSize = true;
+            this.labl87.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.labl87.ForeColor = System.Drawing.Color.Gray;
+            this.labl87.Location = new System.Drawing.Point(44, 40);
+            this.labl87.Name = "labl87";
+            this.labl87.Size = new System.Drawing.Size(68, 22);
+            this.labl87.TabIndex = 38;
+            this.labl87.Text = "Ecom Site";
+            // 
+            // localWeb
+            // 
+            this.localWeb.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(93)))), ((int)(((byte)(191)))));
+            this.localWeb.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.localWeb.Checked = true;
+            this.localWeb.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(93)))), ((int)(((byte)(191)))));
+            this.localWeb.ForeColor = System.Drawing.Color.White;
+            this.localWeb.Location = new System.Drawing.Point(17, 40);
+            this.localWeb.Name = "localWeb";
+            this.localWeb.Size = new System.Drawing.Size(20, 20);
+            this.localWeb.TabIndex = 37;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Poppins Medium", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(10, 7);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(54, 28);
+            this.label21.TabIndex = 25;
+            this.label21.Text = "Local";
+            // 
+            // labe88
+            // 
+            this.labe88.AutoSize = true;
+            this.labe88.Font = new System.Drawing.Font("Poppins Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.labe88.ForeColor = System.Drawing.Color.Gray;
+            this.labe88.Location = new System.Drawing.Point(195, 40);
+            this.labe88.Name = "labe88";
+            this.labe88.Size = new System.Drawing.Size(42, 22);
+            this.labe88.TabIndex = 40;
+            this.labe88.Text = "Store";
+            // 
+            // localStore
+            // 
+            this.localStore.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(93)))), ((int)(((byte)(191)))));
+            this.localStore.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
+            this.localStore.Checked = true;
+            this.localStore.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(93)))), ((int)(((byte)(191)))));
+            this.localStore.ForeColor = System.Drawing.Color.White;
+            this.localStore.Location = new System.Drawing.Point(168, 40);
+            this.localStore.Name = "localStore";
+            this.localStore.Size = new System.Drawing.Size(20, 20);
+            this.localStore.TabIndex = 39;
+            // 
             // addProduct02
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -626,6 +704,8 @@
             this.optionsPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -671,5 +751,11 @@
         private System.Windows.Forms.Label label11;
         private Bunifu.Framework.UI.BunifuCheckbox haveOptions;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label labe88;
+        private Bunifu.Framework.UI.BunifuCheckbox localStore;
+        private System.Windows.Forms.Label labl87;
+        private Bunifu.Framework.UI.BunifuCheckbox localWeb;
+        private System.Windows.Forms.Label label21;
     }
 }

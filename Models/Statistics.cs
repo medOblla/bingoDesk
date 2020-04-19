@@ -11,5 +11,9 @@ namespace BingoStore.Models
         public int nbsales { get; set; }
         public int nbProducts { get; set; }
         public int nbUsers { get; set; }
+        public int women { get; set; }
+        public int men { get; set; }
+        public int kids { get; set; }
+        public int access { get; set; }
     }
 }

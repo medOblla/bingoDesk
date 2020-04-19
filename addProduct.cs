@@ -57,7 +57,7 @@ namespace BingoStore
                     if (result == DialogResult.OK && !string.IsNullOrWhiteSpace(fbd.SelectedPath))
                     {
                         string sourcePath = fbd.SelectedPath.ToString();
-                        string targetPath = @"C:\xampp\htdocs\Bng\bingoFinal\public\productImages\";
+                        string targetPath = @"C:\xampp\htdocs\bingoFinal\public\productImages\";
                         if (!Directory.Exists(targetPath))
                         {
                             Directory.CreateDirectory(targetPath);
@@ -71,15 +71,9 @@ namespace BingoStore
                             firstImg = Path.Combine(targetPath,Path.GetFileName(destFile));
                             File.Move(sourceFile, destFile);
                             newDir.Add(Path.GetFileName(destFile).ToString());
-                            Console.WriteLine("---------------------------");
-
-                            Console.WriteLine(firstImg);
-
                         }
                         string jsonImages = JsonConvert.SerializeObject(newDir);
                         product.product_images = jsonImages;
-                        Console.WriteLine(jsonImages);
-                        Console.WriteLine(newDir.ElementAt(0));
                         firstImage.Image = Image.FromFile(firstImg);
                     }
                 }
@@ -158,7 +152,7 @@ namespace BingoStore
             }
         }
         
-            public bool flag2 = false;
+        public bool flag2 = false;
         public int counter2 = 0;
         private void costPerItem_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -173,6 +167,13 @@ namespace BingoStore
 
                 if (counter2 > 1 && flag2) e.Handled = true;
             }
+            if(price.Text != null && costPerItem.Text != null)
+            {
+                margin.Visible = true;
+                marginVal.Text = FinalProduct.profit_calcul(double.Parse(costPerItem.Text), double.Parse(price.Text)).ToString();
+                marginVal.Visible = true;
+            }
+            
         }
     }
 }

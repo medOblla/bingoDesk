@@ -35,17 +35,13 @@
             this.notification = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.scrollable = new System.Windows.Forms.Panel();
-            this.actionsDropDown = new Bunifu.Framework.UI.BunifuDropdown();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.searchBar = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.bunifuDropdown1 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.filter = new Bunifu.Framework.UI.BunifuDropdown();
             this.sidePanel = new System.Windows.Forms.Panel();
             this.shop = new System.Windows.Forms.Label();
             this.site = new System.Windows.Forms.Label();
@@ -100,17 +96,13 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.scrollable);
-            this.panel1.Controls.Add(this.actionsDropDown);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.bunifuCheckbox1);
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.searchBar);
-            this.panel1.Controls.Add(this.bunifuDropdown1);
+            this.panel1.Controls.Add(this.filter);
             this.panel1.Controls.Add(this.sidePanel);
             this.panel1.Controls.Add(this.shop);
             this.panel1.Controls.Add(this.site);
@@ -123,37 +115,19 @@
             // 
             // scrollable
             // 
-            this.scrollable.Location = new System.Drawing.Point(64, 161);
+            this.scrollable.Location = new System.Drawing.Point(64, 108);
             this.scrollable.Name = "scrollable";
-            this.scrollable.Size = new System.Drawing.Size(1008, 430);
+            this.scrollable.Size = new System.Drawing.Size(1008, 483);
             this.scrollable.TabIndex = 35;
-            // 
-            // actionsDropDown
-            // 
-            this.actionsDropDown.BackColor = System.Drawing.Color.Transparent;
-            this.actionsDropDown.BorderRadius = 3;
-            this.actionsDropDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.actionsDropDown.ForeColor = System.Drawing.Color.Black;
-            this.actionsDropDown.Items = new string[] {
-        "Actions",
-        "Delete Products",
-        "Hide Products"};
-            this.actionsDropDown.Location = new System.Drawing.Point(118, 123);
-            this.actionsDropDown.Name = "actionsDropDown";
-            this.actionsDropDown.NomalColor = System.Drawing.Color.White;
-            this.actionsDropDown.onHoverColor = System.Drawing.Color.White;
-            this.actionsDropDown.selectedIndex = 0;
-            this.actionsDropDown.Size = new System.Drawing.Size(155, 24);
-            this.actionsDropDown.TabIndex = 34;
             // 
             // label8
             // 
             this.label8.BackColor = System.Drawing.Color.Red;
             this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label8.ForeColor = System.Drawing.Color.Red;
-            this.label8.Location = new System.Drawing.Point(64, 157);
+            this.label8.Location = new System.Drawing.Point(64, 104);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(1008, 1);
+            this.label8.Size = new System.Drawing.Size(1008, 0);
             this.label8.TabIndex = 25;
             // 
             // label7
@@ -161,7 +135,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label7.Location = new System.Drawing.Point(998, 125);
+            this.label7.Location = new System.Drawing.Point(998, 72);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 23);
             this.label7.TabIndex = 24;
@@ -172,7 +146,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label6.Location = new System.Drawing.Point(873, 125);
+            this.label6.Location = new System.Drawing.Point(873, 72);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(49, 23);
             this.label6.TabIndex = 24;
@@ -183,7 +157,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(757, 125);
+            this.label5.Location = new System.Drawing.Point(757, 72);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(42, 23);
             this.label5.TabIndex = 24;
@@ -194,7 +168,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(599, 125);
+            this.label4.Location = new System.Drawing.Point(599, 72);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(71, 23);
             this.label4.TabIndex = 24;
@@ -205,76 +179,31 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Poppins Medium", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(299, 125);
+            this.label3.Location = new System.Drawing.Point(299, 72);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 23);
             this.label3.TabIndex = 24;
             this.label3.Text = "Product";
             // 
-            // bunifuCheckbox1
+            // filter
             // 
-            this.bunifuCheckbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuCheckbox1.ChechedOffColor = System.Drawing.Color.White;
-            this.bunifuCheckbox1.Checked = true;
-            this.bunifuCheckbox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(205)))), ((int)(((byte)(117)))));
-            this.bunifuCheckbox1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox1.Location = new System.Drawing.Point(87, 125);
-            this.bunifuCheckbox1.Name = "bunifuCheckbox1";
-            this.bunifuCheckbox1.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox1.TabIndex = 23;
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(1025, 72);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(24, 24);
-            this.button1.TabIndex = 22;
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // searchBar
-            // 
-            this.searchBar.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
-            this.searchBar.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.searchBar.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.searchBar.BorderThickness = 1;
-            this.searchBar.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.searchBar.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.searchBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.searchBar.isPassword = false;
-            this.searchBar.Location = new System.Drawing.Point(282, 61);
-            this.searchBar.Margin = new System.Windows.Forms.Padding(4);
-            this.searchBar.Name = "searchBar";
-            this.searchBar.Size = new System.Drawing.Size(790, 44);
-            this.searchBar.TabIndex = 21;
-            this.searchBar.Text = "bunifuMetroTextbox1";
-            this.searchBar.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // bunifuDropdown1
-            // 
-            this.bunifuDropdown1.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown1.BorderRadius = 3;
-            this.bunifuDropdown1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuDropdown1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown1.Items = new string[] {
-        "Filter Products",
+            this.filter.BackColor = System.Drawing.Color.Transparent;
+            this.filter.BorderRadius = 3;
+            this.filter.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.filter.ForeColor = System.Drawing.Color.Black;
+            this.filter.Items = new string[] {
+        "All Categories",
         "Men\'s Wear",
         "Women\'s Wear",
-        "Kid\'s Wear",
-        "Accessories"};
-            this.bunifuDropdown1.Location = new System.Drawing.Point(64, 62);
-            this.bunifuDropdown1.Name = "bunifuDropdown1";
-            this.bunifuDropdown1.NomalColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.onHoverColor = System.Drawing.Color.White;
-            this.bunifuDropdown1.selectedIndex = 0;
-            this.bunifuDropdown1.Size = new System.Drawing.Size(219, 44);
-            this.bunifuDropdown1.TabIndex = 20;
+        "Kid\'s Wear"};
+            this.filter.Location = new System.Drawing.Point(120, 66);
+            this.filter.Name = "filter";
+            this.filter.NomalColor = System.Drawing.Color.White;
+            this.filter.onHoverColor = System.Drawing.Color.White;
+            this.filter.selectedIndex = 0;
+            this.filter.Size = new System.Drawing.Size(155, 29);
+            this.filter.TabIndex = 20;
+            this.filter.onItemSelected += new System.EventHandler(this.filter_onItemSelected);
             // 
             // sidePanel
             // 
@@ -363,17 +292,13 @@
         private System.Windows.Forms.Panel sidePanel;
         private System.Windows.Forms.Label shop;
         private System.Windows.Forms.Label site;
-        private Bunifu.Framework.UI.BunifuDropdown actionsDropDown;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox1;
-        private System.Windows.Forms.Button button1;
-        private Bunifu.Framework.UI.BunifuMetroTextbox searchBar;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown1;
+        private Bunifu.Framework.UI.BunifuDropdown filter;
         private System.Windows.Forms.Panel scrollable;
     }
 }

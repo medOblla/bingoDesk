@@ -28,8 +28,9 @@ namespace BingoStore.Models
         public string product_carrier { get; set; }
         public string product_size { get; set; }
         public string product_colors { get; set; }
+        public string local { get; set; }
 
-        public double profit_calcul(double cost_per_item, double profit_price)
+        public static double profit_calcul(double cost_per_item, double profit_price)
         {
             return 100 - (cost_per_item * 100) / profit_price;
 

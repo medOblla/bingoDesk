@@ -28,40 +28,8 @@ namespace BingoStore.APIs
                 strResultTest = streamReader.ReadToEnd();
                 streamReader.Close();
             }
-            Console.WriteLine("------------------------------------------");
-            Console.WriteLine(strResultTest);
-            Console.WriteLine("------------------------------------------");
             var serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
             List<FinalProduct> objList = (List<FinalProduct>)serializer.Deserialize(strResultTest, typeof(List<FinalProduct>));
-            Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-            foreach(FinalProduct prod in objList)
-            {
-                Console.WriteLine("////////////////////////////////////////");
-                Console.WriteLine(prod.title);
-                Console.WriteLine(prod.description);
-                Console.WriteLine(prod.product_images);
-                Console.WriteLine(prod.category_id);
-                Console.WriteLine(prod.product_gender);
-                Console.WriteLine(prod.product_brand);
-                Console.WriteLine(prod.product_tags);
-                Console.WriteLine(prod.price);
-                Console.WriteLine(prod.old_price);
-                Console.WriteLine(prod.cost_per_item);
-                Console.WriteLine(prod.profit_margin);
-                Console.WriteLine(prod.product_barcode);
-                Console.WriteLine(prod.product_sku);
-                Console.WriteLine(prod.product_quantity);
-                Console.WriteLine(prod.product_weight);
-                Console.WriteLine(prod.product_height);
-                Console.WriteLine(prod.product_carrier);
-                Console.WriteLine(prod.product_size);
-                Console.WriteLine(prod.product_colors);
-      
-
-            }
-            Console.WriteLine("------------------------------------------");
-            //List<FinalProduct> ObjOrderList = new List<FinalProduct>();
-            //ObjOrderList = JsonConvert.DeserializeObject<List<FinalProduct>>(strResultTest);
             return objList;
         }
 
@@ -98,11 +66,8 @@ namespace BingoStore.APIs
                 strResultTest = streamReader.ReadToEnd();
                 streamReader.Close();
             }
-            Console.WriteLine(strResultTest);
             var serializer = new System.Web.Script.Serialization.JavaScriptSerializer();
             List<Category> cates = (List<Category>)serializer.Deserialize(strResultTest, typeof(List<Category>));
-            Console.WriteLine("+++++++++++++++++++++++++++++++++++++++++++++++++++++++");
-            Console.WriteLine(cates.Count());
             return cates;
         }
         public static async void Add_Product(FinalProduct product)
@@ -119,15 +84,16 @@ namespace BingoStore.APIs
                 {"product_profit_price", product.price.ToString()},
                 {"product_compare_to_price", product.old_price.ToString()},
                 {"cost_per_item", product.cost_per_item.ToString()},
-                {"product_profit_margin", product.profit_calcul(product.cost_per_item,product.price).ToString()},
+                {"product_profit_margin", FinalProduct.profit_calcul(product.cost_per_item,product.price).ToString()},
                 {"product_barcode", product.product_barcode},
                 {"product_sku", product.product_sku},
                 {"product_quantity", product.product_quantity.ToString()},
-                {"product_wheight", product.product_weight.ToString()},
+                {"product_weight", product.product_weight.ToString()},
                 {"product_height", product.product_height.ToString()},
                 {"product_carrier", product.product_carrier},
                 {"product_size", product.product_size},
-                {"product_colors", product.product_colors}
+                {"product_colors", product.product_colors},
+                {"local", product.local}
             };
             Console.WriteLine(product.title);
             Console.WriteLine(product.description);
@@ -139,7 +105,7 @@ namespace BingoStore.APIs
             Console.WriteLine(product.price.ToString());
             Console.WriteLine(product.old_price.ToString());
             Console.WriteLine(product.cost_per_item.ToString());
-            Console.WriteLine(product.profit_calcul(product.cost_per_item, product.price).ToString());
+            Console.WriteLine(FinalProduct.profit_calcul(product.cost_per_item, product.price).ToString());
             Console.WriteLine(product.product_barcode);
             Console.WriteLine(product.product_sku);
             Console.WriteLine(product.product_quantity.ToString());
@@ -182,7 +148,7 @@ namespace BingoStore.APIs
                 {"product_profit_price", product.price.ToString()},
                 {"product_compare_to_price", product.old_price.ToString()},
                 {"cost_per_item", product.cost_per_item.ToString()},
-                {"product_profit_margin", product.profit_calcul(product.cost_per_item,product.price).ToString()},
+                {"product_profit_margin", FinalProduct.profit_calcul(product.cost_per_item,product.price).ToString()},
                 {"product_barcode", product.product_barcode},
                 {"product_sku", product.product_sku},
                 {"product_quantity", product.product_quantity.ToString()},
