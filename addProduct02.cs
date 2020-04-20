@@ -44,6 +44,8 @@ namespace BingoStore
 
         private void save_Click(object sender, EventArgs e)
         {
+
+
             FinalProduct product = new FinalProduct();
             product.id = carrierProduct.id;
             product.title = carrierProduct.title;
@@ -62,22 +64,68 @@ namespace BingoStore
             product.product_weight = double.Parse(weight.Text);
             product.product_height = double.Parse(height.Text);
             product.product_carrier = carrier.selectedValue.ToString();
-            if(localStore.Checked && localWeb.Checked)
+            if (localStore.Checked && localWeb.Checked)
             {
                 product.local = "WebnStore";
             }
-            else if(localWeb.Checked && !localStore.Checked)
+            else if (localWeb.Checked && !localStore.Checked)
             {
                 product.local = "Web";
             }
-            else if(!localWeb.Checked && localStore.Checked)
+            else if (!localWeb.Checked && localStore.Checked)
             {
                 product.local = "Store";
             }
             product.product_size = sizes.Text;
             product.product_colors = colors.Text;
-            Product.Add_Product(product);
-            MessageBox.Show("Succesfully Inserted !");
+            //Product.Add_Product(product);
+
+            Console.WriteLine(product.title);
+            Console.WriteLine(product.description);
+            Console.WriteLine(product.product_images);
+            Console.WriteLine(product.category_id);
+            Console.WriteLine(product.product_gender);
+            Console.WriteLine(product.product_brand);
+            Console.WriteLine(product.product_tags);
+            Console.WriteLine(product.price.ToString());
+            Console.WriteLine(product.old_price.ToString());
+            Console.WriteLine(product.cost_per_item.ToString());
+            Console.WriteLine(FinalProduct.profit_calcul(product.cost_per_item, product.price).ToString());
+            Console.WriteLine(product.product_barcode);
+            Console.WriteLine(product.product_sku);
+            Console.WriteLine(product.product_quantity.ToString());
+            Console.WriteLine(product.product_weight.ToString());
+            Console.WriteLine(product.product_height.ToString());
+            Console.WriteLine(product.product_carrier);
+            Console.WriteLine(product.product_size);
+            Console.WriteLine(product.product_colors);
+
+            MessageBox.Show(sizes.selectedValue.ToString());
+        }
+
+        private void sku_Enter(object sender, EventArgs e)
+        {
+            sku.Text = "";
+        }
+
+        private void barcode_Enter(object sender, EventArgs e)
+        {
+            barcode.Text = "";
+        }
+
+        private void productQuantity_Enter(object sender, EventArgs e)
+        {
+            productQuantity.Text = "";
+        }
+
+        private void weight_Enter(object sender, EventArgs e)
+        {
+            weight.Text = "";
+        }
+
+        private void height_Enter(object sender, EventArgs e)
+        {
+            height.Text = "";
         }
     }
 }

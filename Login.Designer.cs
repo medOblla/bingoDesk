@@ -167,7 +167,7 @@
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(337, 44);
             this.username.TabIndex = 25;
-            this.username.Text = "username";
+            this.username.Text = "Admin";
             this.username.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label1

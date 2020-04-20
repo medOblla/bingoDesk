@@ -32,5 +32,15 @@ namespace BingoStore
             }
             
         }
+
+        private void username_Enter(object sender, EventArgs e)
+        {
+            username.Text = " ";
+        }
+
+        private void password_Enter(object sender, EventArgs e)
+        {
+            password.Text = " ";
+        }
     }
 }

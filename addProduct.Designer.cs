@@ -36,6 +36,9 @@
             this.title = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.brand = new Bunifu.Framework.UI.BunifuDropdown();
+            this.gender = new Bunifu.Framework.UI.BunifuDropdown();
+            this.category = new Bunifu.Framework.UI.BunifuDropdown();
             this.label14 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.tags = new Bunifu.Framework.UI.BunifuMetroTextbox();
@@ -46,23 +49,16 @@
             this.firstImage = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.marginVal = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.label12 = new System.Windows.Forms.Label();
             this.costPerItem = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label11 = new System.Windows.Forms.Label();
             this.compareToPrice = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.margin = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.price = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label9 = new System.Windows.Forms.Label();
             this.next = new Bunifu.Framework.UI.BunifuFlatButton();
             this.discard = new Bunifu.Framework.UI.BunifuFlatButton();
             this.firstPanel = new System.Windows.Forms.Panel();
-            this.category = new Bunifu.Framework.UI.BunifuDropdown();
-            this.gender = new Bunifu.Framework.UI.BunifuDropdown();
-            this.brand = new Bunifu.Framework.UI.BunifuDropdown();
             this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -130,6 +126,7 @@
             this.title.TabIndex = 22;
             this.title.Text = "Short sleeve t-shirt";
             this.title.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.title.Enter += new System.EventHandler(this.title_Enter);
             // 
             // label2
             // 
@@ -158,6 +155,95 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(517, 294);
             this.panel2.TabIndex = 26;
+            // 
+            // brand
+            // 
+            this.brand.BackColor = System.Drawing.Color.Transparent;
+            this.brand.BorderRadius = 3;
+            this.brand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.brand.ForeColor = System.Drawing.Color.Black;
+            this.brand.Items = new string[] {
+        "Nike",
+        "Addidas",
+        "Puma",
+        "Reebok",
+        "NewBalance",
+        "Rip Curl"};
+            this.brand.Location = new System.Drawing.Point(20, 139);
+            this.brand.Name = "brand";
+            this.brand.NomalColor = System.Drawing.Color.White;
+            this.brand.onHoverColor = System.Drawing.Color.White;
+            this.brand.selectedIndex = 0;
+            this.brand.Size = new System.Drawing.Size(471, 44);
+            this.brand.TabIndex = 40;
+            this.brand.onItemSelected += new System.EventHandler(this.bunifuDropdown1_onItemSelected);
+            // 
+            // gender
+            // 
+            this.gender.BackColor = System.Drawing.Color.Transparent;
+            this.gender.BorderRadius = 3;
+            this.gender.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gender.ForeColor = System.Drawing.Color.Black;
+            this.gender.Items = new string[] {
+        "Man ",
+        "Woman ",
+        "Child"};
+            this.gender.Location = new System.Drawing.Point(274, 65);
+            this.gender.Name = "gender";
+            this.gender.NomalColor = System.Drawing.Color.White;
+            this.gender.onHoverColor = System.Drawing.Color.White;
+            this.gender.selectedIndex = 0;
+            this.gender.Size = new System.Drawing.Size(217, 44);
+            this.gender.TabIndex = 39;
+            // 
+            // category
+            // 
+            this.category.BackColor = System.Drawing.Color.Transparent;
+            this.category.BorderRadius = 3;
+            this.category.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.category.ForeColor = System.Drawing.Color.Black;
+            this.category.Items = new string[] {
+        "Running",
+        "Hicking",
+        "Football ",
+        "Tennis",
+        "Fishing",
+        "Cardio",
+        "Swimming",
+        "Surfing",
+        "menSweater",
+        "menFootwar",
+        "menPants",
+        "menT-Shirts",
+        "menSneakers",
+        "womenSweater",
+        "womenFootwar",
+        "womenPants",
+        "womenT-Shirts",
+        "womenSneakers",
+        "childSweater",
+        "childFootwar",
+        "childPants",
+        "childT-Shirts",
+        "childSneakers",
+        "Adidas",
+        "Nike",
+        "Puma",
+        "Reebook",
+        "SHIRTS",
+        "SNEAKERS",
+        "HOODIES",
+        "PANTS",
+        "ACCESORIES",
+        ""};
+            this.category.Location = new System.Drawing.Point(20, 65);
+            this.category.Name = "category";
+            this.category.NomalColor = System.Drawing.Color.White;
+            this.category.onHoverColor = System.Drawing.Color.White;
+            this.category.selectedIndex = 0;
+            this.category.Size = new System.Drawing.Size(217, 44);
+            this.category.TabIndex = 28;
+            this.category.onItemSelected += new System.EventHandler(this.category_onItemSelected);
             // 
             // label14
             // 
@@ -196,6 +282,7 @@
             this.tags.TabIndex = 24;
             this.tags.Text = "summer, footbal, men";
             this.tags.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.tags.Enter += new System.EventHandler(this.tags_Enter);
             // 
             // label6
             // 
@@ -263,14 +350,10 @@
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.marginVal);
-            this.panel5.Controls.Add(this.label13);
-            this.panel5.Controls.Add(this.bunifuCheckbox1);
             this.panel5.Controls.Add(this.label12);
             this.panel5.Controls.Add(this.costPerItem);
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.compareToPrice);
-            this.panel5.Controls.Add(this.margin);
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.price);
             this.panel5.Controls.Add(this.label9);
@@ -278,41 +361,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(517, 245);
             this.panel5.TabIndex = 28;
-            // 
-            // marginVal
-            // 
-            this.marginVal.AutoSize = true;
-            this.marginVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.marginVal.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.marginVal.Location = new System.Drawing.Point(225, 46);
-            this.marginVal.Name = "marginVal";
-            this.marginVal.Size = new System.Drawing.Size(27, 13);
-            this.marginVal.TabIndex = 35;
-            this.marginVal.Text = "20%";
-            this.marginVal.Visible = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Gray;
-            this.label13.Location = new System.Drawing.Point(44, 211);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(149, 15);
-            this.label13.TabIndex = 34;
-            this.label13.Text = "Charge tax on this prodcut";
-            // 
-            // bunifuCheckbox1
-            // 
-            this.bunifuCheckbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(93)))), ((int)(((byte)(191)))));
-            this.bunifuCheckbox1.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.bunifuCheckbox1.Checked = true;
-            this.bunifuCheckbox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(93)))), ((int)(((byte)(191)))));
-            this.bunifuCheckbox1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox1.Location = new System.Drawing.Point(17, 213);
-            this.bunifuCheckbox1.Name = "bunifuCheckbox1";
-            this.bunifuCheckbox1.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox1.TabIndex = 33;
             // 
             // label12
             // 
@@ -341,6 +389,7 @@
             this.costPerItem.TabIndex = 31;
             this.costPerItem.Text = "MAD 0.00";
             this.costPerItem.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.costPerItem.Enter += new System.EventHandler(this.costPerItem_Enter);
             this.costPerItem.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.costPerItem_KeyPress);
             // 
             // label11
@@ -370,19 +419,8 @@
             this.compareToPrice.TabIndex = 29;
             this.compareToPrice.Text = "MAD 0.00";
             this.compareToPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.compareToPrice.Enter += new System.EventHandler(this.compareToPrice_Enter);
             this.compareToPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.compareToPrice_KeyPress);
-            // 
-            // margin
-            // 
-            this.margin.AutoSize = true;
-            this.margin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.margin.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.margin.Location = new System.Drawing.Point(167, 45);
-            this.margin.Name = "margin";
-            this.margin.Size = new System.Drawing.Size(48, 13);
-            this.margin.TabIndex = 28;
-            this.margin.Text = "Margin : ";
-            this.margin.Visible = false;
             // 
             // label10
             // 
@@ -412,6 +450,7 @@
             this.price.Text = "MAD 0.00";
             this.price.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.price.OnValueChanged += new System.EventHandler(this.price_OnValueChanged);
+            this.price.Enter += new System.EventHandler(this.price_Enter);
             this.price.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.price_KeyPress);
             // 
             // label9
@@ -510,95 +549,6 @@
             this.firstPanel.TabIndex = 18;
             this.firstPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.firstPanel_Paint);
             // 
-            // category
-            // 
-            this.category.BackColor = System.Drawing.Color.Transparent;
-            this.category.BorderRadius = 3;
-            this.category.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.category.ForeColor = System.Drawing.Color.Black;
-            this.category.Items = new string[] {
-        "Running",
-        "Hicking",
-        "Football ",
-        "Tennis",
-        "Fishing",
-        "Cardio",
-        "Swimming",
-        "Surfing",
-        "menSweater",
-        "menFootwar",
-        "menPants",
-        "menT-Shirts",
-        "menSneakers",
-        "womenSweater",
-        "womenFootwar",
-        "womenPants",
-        "womenT-Shirts",
-        "womenSneakers",
-        "childSweater",
-        "childFootwar",
-        "childPants",
-        "childT-Shirts",
-        "childSneakers",
-        "Adidas",
-        "Nike",
-        "Puma",
-        "Reebook",
-        "SHIRTS",
-        "SNEAKERS",
-        "HOODIES",
-        "PANTS",
-        "ACCESORIES",
-        ""};
-            this.category.Location = new System.Drawing.Point(20, 65);
-            this.category.Name = "category";
-            this.category.NomalColor = System.Drawing.Color.White;
-            this.category.onHoverColor = System.Drawing.Color.White;
-            this.category.selectedIndex = 0;
-            this.category.Size = new System.Drawing.Size(217, 44);
-            this.category.TabIndex = 28;
-            this.category.onItemSelected += new System.EventHandler(this.category_onItemSelected);
-            // 
-            // gender
-            // 
-            this.gender.BackColor = System.Drawing.Color.Transparent;
-            this.gender.BorderRadius = 3;
-            this.gender.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.gender.ForeColor = System.Drawing.Color.Black;
-            this.gender.Items = new string[] {
-        "Man ",
-        "Woman ",
-        "Child"};
-            this.gender.Location = new System.Drawing.Point(274, 65);
-            this.gender.Name = "gender";
-            this.gender.NomalColor = System.Drawing.Color.White;
-            this.gender.onHoverColor = System.Drawing.Color.White;
-            this.gender.selectedIndex = 0;
-            this.gender.Size = new System.Drawing.Size(217, 44);
-            this.gender.TabIndex = 39;
-            // 
-            // brand
-            // 
-            this.brand.BackColor = System.Drawing.Color.Transparent;
-            this.brand.BorderRadius = 3;
-            this.brand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.brand.ForeColor = System.Drawing.Color.Black;
-            this.brand.Items = new string[] {
-        "Nike",
-        "Addidas",
-        "Puma",
-        "Reebok",
-        "NewBalance",
-        "Rip Curl"};
-            this.brand.Location = new System.Drawing.Point(20, 139);
-            this.brand.Name = "brand";
-            this.brand.NomalColor = System.Drawing.Color.White;
-            this.brand.onHoverColor = System.Drawing.Color.White;
-            this.brand.selectedIndex = 0;
-            this.brand.Size = new System.Drawing.Size(471, 44);
-            this.brand.TabIndex = 40;
-            this.brand.onItemSelected += new System.EventHandler(this.bunifuDropdown1_onItemSelected);
-            // 
             // addProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -640,14 +590,10 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label marginVal;
-        private System.Windows.Forms.Label label13;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox1;
         private System.Windows.Forms.Label label12;
         private Bunifu.Framework.UI.BunifuMetroTextbox costPerItem;
         private System.Windows.Forms.Label label11;
         private Bunifu.Framework.UI.BunifuMetroTextbox compareToPrice;
-        private System.Windows.Forms.Label margin;
         private System.Windows.Forms.Label label10;
         private Bunifu.Framework.UI.BunifuMetroTextbox price;
         private System.Windows.Forms.Label label9;

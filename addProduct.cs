@@ -167,13 +167,33 @@ namespace BingoStore
 
                 if (counter2 > 1 && flag2) e.Handled = true;
             }
-            if(price.Text != null && costPerItem.Text != null)
-            {
-                margin.Visible = true;
-                marginVal.Text = FinalProduct.profit_calcul(double.Parse(costPerItem.Text), double.Parse(price.Text)).ToString();
-                marginVal.Visible = true;
-            }
             
+            
+        }
+
+        private void costPerItem_Enter(object sender, EventArgs e)
+        {
+            costPerItem.Text = "";
+        }
+
+        private void price_Enter(object sender, EventArgs e)
+        {
+            price.Text = "";
+        }
+
+        private void title_Enter(object sender, EventArgs e)
+        {
+            title.Text = "";
+        }
+
+        private void tags_Enter(object sender, EventArgs e)
+        {
+            tags.Text = "";
+        }
+
+        private void compareToPrice_Enter(object sender, EventArgs e)
+        {
+            compareToPrice.Text = "";
         }
     }
 }
