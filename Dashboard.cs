@@ -53,6 +53,8 @@ namespace BingoStore
         {
             sidePanel.Height = newProduct.Height;
             sidePanel.Top = reports.Top;
+            ShowReports tab = new ShowReports();
+            MainControlClass.showControl(tab, content);
         }
 
         private void panel10_Paint(object sender, PaintEventArgs e)

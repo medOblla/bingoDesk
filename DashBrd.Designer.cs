@@ -47,9 +47,12 @@
             this.label11 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.detailsTable = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.bunifuDropdown2 = new Bunifu.Framework.UI.BunifuDropdown();
+            this.Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.thisMonth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pastMonth = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.change = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.past_days = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label10 = new System.Windows.Forms.Label();
-            this.DashboardMetric = new Bunifu.Framework.UI.BunifuDropdown();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -67,11 +70,6 @@
             this.customernb = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.Prod = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.thisMonth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pastMonth = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.change = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.past_days = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel9.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -221,7 +219,6 @@
             // 
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.detailsTable);
-            this.panel8.Controls.Add(this.bunifuDropdown2);
             this.panel8.Controls.Add(this.label10);
             this.panel8.Location = new System.Drawing.Point(27, 254);
             this.panel8.Name = "panel8";
@@ -267,22 +264,41 @@
             this.detailsTable.Size = new System.Drawing.Size(664, 373);
             this.detailsTable.TabIndex = 12;
             // 
-            // bunifuDropdown2
+            // Prod
             // 
-            this.bunifuDropdown2.BackColor = System.Drawing.Color.Transparent;
-            this.bunifuDropdown2.BorderRadius = 10;
-            this.bunifuDropdown2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bunifuDropdown2.ForeColor = System.Drawing.Color.Black;
-            this.bunifuDropdown2.Items = new string[] {
-        "Shop Batoire",
-        "Shop Inzegan"};
-            this.bunifuDropdown2.Location = new System.Drawing.Point(539, 11);
-            this.bunifuDropdown2.Name = "bunifuDropdown2";
-            this.bunifuDropdown2.NomalColor = System.Drawing.Color.White;
-            this.bunifuDropdown2.onHoverColor = System.Drawing.Color.White;
-            this.bunifuDropdown2.selectedIndex = 0;
-            this.bunifuDropdown2.Size = new System.Drawing.Size(134, 35);
-            this.bunifuDropdown2.TabIndex = 11;
+            this.Prod.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Prod.HeaderText = "Product";
+            this.Prod.Name = "Prod";
+            this.Prod.ReadOnly = true;
+            this.Prod.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // thisMonth
+            // 
+            this.thisMonth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.thisMonth.HeaderText = "Stock Qte";
+            this.thisMonth.Name = "thisMonth";
+            this.thisMonth.ReadOnly = true;
+            // 
+            // pastMonth
+            // 
+            this.pastMonth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.pastMonth.HeaderText = "Sold";
+            this.pastMonth.Name = "pastMonth";
+            this.pastMonth.ReadOnly = true;
+            // 
+            // change
+            // 
+            this.change.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.change.HeaderText = "Available";
+            this.change.Name = "change";
+            this.change.ReadOnly = true;
+            // 
+            // past_days
+            // 
+            this.past_days.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.past_days.HeaderText = "Category";
+            this.past_days.Name = "past_days";
+            this.past_days.ReadOnly = true;
             // 
             // label10
             // 
@@ -293,24 +309,6 @@
             this.label10.Size = new System.Drawing.Size(135, 24);
             this.label10.TabIndex = 10;
             this.label10.Text = "Shops - Details";
-            // 
-            // DashboardMetric
-            // 
-            this.DashboardMetric.BackColor = System.Drawing.Color.Transparent;
-            this.DashboardMetric.BorderRadius = 10;
-            this.DashboardMetric.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DashboardMetric.ForeColor = System.Drawing.Color.Black;
-            this.DashboardMetric.Items = new string[] {
-        "Year",
-        "Month",
-        "Day"};
-            this.DashboardMetric.Location = new System.Drawing.Point(1042, 12);
-            this.DashboardMetric.Name = "DashboardMetric";
-            this.DashboardMetric.NomalColor = System.Drawing.Color.White;
-            this.DashboardMetric.onHoverColor = System.Drawing.Color.White;
-            this.DashboardMetric.selectedIndex = 0;
-            this.DashboardMetric.Size = new System.Drawing.Size(106, 35);
-            this.DashboardMetric.TabIndex = 18;
             // 
             // panel7
             // 
@@ -493,42 +491,6 @@
             this.label1.TabIndex = 13;
             this.label1.Text = "Dashboard Overview";
             // 
-            // Prod
-            // 
-            this.Prod.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.Prod.HeaderText = "Product";
-            this.Prod.Name = "Prod";
-            this.Prod.ReadOnly = true;
-            this.Prod.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // thisMonth
-            // 
-            this.thisMonth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.thisMonth.HeaderText = "This Month";
-            this.thisMonth.Name = "thisMonth";
-            this.thisMonth.ReadOnly = true;
-            // 
-            // pastMonth
-            // 
-            this.pastMonth.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.pastMonth.HeaderText = "Past Month";
-            this.pastMonth.Name = "pastMonth";
-            this.pastMonth.ReadOnly = true;
-            // 
-            // change
-            // 
-            this.change.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.change.HeaderText = "Change";
-            this.change.Name = "change";
-            this.change.ReadOnly = true;
-            // 
-            // past_days
-            // 
-            this.past_days.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.past_days.HeaderText = "Past 30 Days";
-            this.past_days.Name = "past_days";
-            this.past_days.ReadOnly = true;
-            // 
             // DashBrd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -536,7 +498,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel9);
             this.Controls.Add(this.panel8);
-            this.Controls.Add(this.DashboardMetric);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
@@ -587,9 +548,7 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Panel panel8;
         private Bunifu.Framework.UI.BunifuCustomDataGrid detailsTable;
-        private Bunifu.Framework.UI.BunifuDropdown bunifuDropdown2;
         private System.Windows.Forms.Label label10;
-        private Bunifu.Framework.UI.BunifuDropdown DashboardMetric;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;

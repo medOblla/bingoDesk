@@ -20,7 +20,8 @@ namespace BingoStore
         {
             InitializeComponent();
             Statistics  myStats = Product.Get_Stats();
-            
+            List<FinalProduct> productList = Product.Page_load();
+
             label5.Text = myStats.nbProducts.ToString();
             customernb.Text = myStats.nbUsers.ToString();
             label2.Text = myStats.nbsales.ToString();
@@ -37,17 +38,19 @@ namespace BingoStore
             chart1.Series["inventory"].Points[2].Color = Color.FromArgb(253, 166, 225);
             chart1.Series["inventory"].Points[3].Color = Color.FromArgb(124, 146, 250);
 
-            string[] row = {"Adiddas Phantom","30", "40", "10", "120" };
-            detailsTable.Rows.Add(row);
-            row = new[] { "Nike Phantom", "50", "40", "-10", "140" };
-            detailsTable.Rows.Add(row);
-            row = new[] { "Adiddas ACE", "30", "50", "20", "120" };
-            detailsTable.Rows.Add(row);
-            row = new[] { "Nike Balenciaga", "10", "30", "20", "200" };
-            detailsTable.Rows.Add(row);
-            row = new[] { "Adiddas Predator", "30", "40", "10", "250" };
-            detailsTable.Rows.Add(row);
-        
+            int i = 0;
+            string[] row;
+            foreach (FinalProduct product in productList)
+            {
+                if (i < 13)
+                {
+                    row = new[] { product.title, product.product_quantity.ToString(), product.nb_sales.ToString(), (product.product_quantity - product.nb_sales).ToString(), product.product_gender };
+                    detailsTable.Rows.Add(row);
+                }
+                else
+                    break;
+                i++;
+            }
         }
 
         private void DashBrd_Load(object sender, EventArgs e)

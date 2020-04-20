@@ -541,7 +541,7 @@ namespace BingoStore
 
         private void site_Click(object sender, EventArgs e)
         {
-            ShowProducts_Load(sender, e, "Web");
+            ShowProducts_Load(sender, e, "ecom");
             sidePanel.Width = site.Width;
             sidePanel.Left = site.Left;
             
@@ -549,7 +549,7 @@ namespace BingoStore
 
         private void shop_Click(object sender, EventArgs e)
         {
-            ShowProducts_Load(sender, e, "Store");
+            ShowProducts_Load(sender, e, "store");
             sidePanel.Width = shop.Width;
             sidePanel.Left = shop.Left;
             

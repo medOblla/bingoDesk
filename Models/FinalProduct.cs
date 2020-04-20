@@ -13,6 +13,7 @@ namespace BingoStore.Models
         public string description { get; set; }
         public string product_images { get; set; }
         public string category_id { get; set; }
+        public int nb_sales { get; set; }
         public string product_gender { get; set; }
         public string product_brand { get; set; }
         public string product_tags { get; set; }

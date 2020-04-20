@@ -19,10 +19,18 @@ namespace BingoStore
 
         private void singIn_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            var form2 = new Dashboard();
-            form2.Closed += (s, args) => this.Close();
-            form2.Show();
+            if(username.Text.Equals("Admin") && password.Text.Equals("admin"))
+            {
+                this.Hide();
+                var form2 = new Dashboard();
+                form2.Closed += (s, args) => this.Close();
+                form2.Show();
+            }
+            else
+            {
+                MessageBox.Show("Username or Password is wrong !");
+            }
+            
         }
     }
 }

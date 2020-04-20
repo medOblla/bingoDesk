@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.notification = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.adminName = new System.Windows.Forms.Label();
@@ -47,7 +45,6 @@
             this.content = new System.Windows.Forms.Panel();
             this.dashBrd1 = new BingoStore.DashBrd();
             this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.panel10.SuspendLayout();
@@ -57,35 +54,11 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(177, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1178, 67);
             this.panel1.TabIndex = 0;
-            // 
-            // panel3
-            // 
-            this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel3.Controls.Add(this.notification);
-            this.panel3.Location = new System.Drawing.Point(926, -11);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(72, 78);
-            this.panel3.TabIndex = 0;
-            // 
-            // notification
-            // 
-            this.notification.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.notification.FlatAppearance.BorderSize = 0;
-            this.notification.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;
-            this.notification.FlatAppearance.MouseOverBackColor = System.Drawing.Color.White;
-            this.notification.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.notification.Image = ((System.Drawing.Image)(resources.GetObject("notification.Image")));
-            this.notification.Location = new System.Drawing.Point(15, 19);
-            this.notification.Name = "notification";
-            this.notification.Size = new System.Drawing.Size(41, 36);
-            this.notification.TabIndex = 2;
-            this.notification.UseVisualStyleBackColor = true;
             // 
             // panel2
             // 
@@ -112,9 +85,9 @@
             this.adminName.Font = new System.Drawing.Font("Poppins", 13F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
             this.adminName.Location = new System.Drawing.Point(64, 25);
             this.adminName.Name = "adminName";
-            this.adminName.Size = new System.Drawing.Size(103, 23);
+            this.adminName.Size = new System.Drawing.Size(96, 23);
             this.adminName.TabIndex = 2;
-            this.adminName.Text = "Hamid Oublla";
+            this.adminName.Text = "Bingo Admin";
             // 
             // bunifuElipse1
             // 
@@ -259,11 +232,11 @@
             this.Controls.Add(this.content);
             this.Controls.Add(this.panel10);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Dashboard";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
@@ -277,8 +250,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Button notification;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label adminName;
         private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;

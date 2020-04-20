@@ -87,6 +87,7 @@
     <Compile Include="APIs\APIHelper.cs" />
     <Compile Include="APIs\APIUtl.cs" />
     <Compile Include="APIs\Product.cs" />
+    <Compile Include="APIs\Review.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,14 +112,27 @@
     <Compile Include="Models\Comments.cs" />
     <Compile Include="Models\FinalProduct.cs" />
     <Compile Include="Models\ProductCls.cs" />
+    <Compile Include="Models\ReviewClass.cs" />
     <Compile Include="Models\Statistics.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReplayRec.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ReplayRec.Designer.cs">
+      <DependentUpon>ReplayRec.cs</DependentUpon>
+    </Compile>
     <Compile Include="ShowProducts.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="ShowProducts.Designer.cs">
       <DependentUpon>ShowProducts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShowReports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ShowReports.Designer.cs">
+      <DependentUpon>ShowReports.cs</DependentUpon>
     </Compile>
     <Compile Include="updateProduct.cs">
       <SubType>UserControl</SubType>
@@ -156,8 +170,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ReplayRec.resx">
+      <DependentUpon>ReplayRec.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ShowProducts.resx">
       <DependentUpon>ShowProducts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowReports.resx">
+      <DependentUpon>ShowReports.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="updateProduct.resx">
       <DependentUpon>updateProduct.cs</DependentUpon>

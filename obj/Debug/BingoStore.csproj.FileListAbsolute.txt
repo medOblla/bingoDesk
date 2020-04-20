@@ -71,7 +71,6 @@ D:\ProjectsGIT\FinalPFE\bingoDesk\bin\Debug\LiveCharts.WinForms.xml
 D:\ProjectsGIT\FinalPFE\bingoDesk\bin\Debug\LiveCharts.Wpf.pdb
 D:\ProjectsGIT\FinalPFE\bingoDesk\bin\Debug\LiveCharts.Wpf.xml
 D:\ProjectsGIT\FinalPFE\bingoDesk\bin\Debug\Newtonsoft.Json.xml
-D:\ProjectsGIT\FinalPFE\bingoDesk\obj\Debug\BingoStore.csprojAssemblyReference.cache
 D:\ProjectsGIT\FinalPFE\bingoDesk\obj\Debug\BingoStore.addProduct.resources
 D:\ProjectsGIT\FinalPFE\bingoDesk\obj\Debug\BingoStore.addProduct02.resources
 D:\ProjectsGIT\FinalPFE\bingoDesk\obj\Debug\BingoStore.Dashboard.resources
@@ -86,3 +85,6 @@ D:\ProjectsGIT\FinalPFE\bingoDesk\obj\Debug\BingoStore.csproj.CoreCompileInputs.
 D:\ProjectsGIT\FinalPFE\bingoDesk\obj\Debug\BingoStore.csproj.CopyComplete
 D:\ProjectsGIT\FinalPFE\bingoDesk\obj\Debug\BingoStore.exe
 D:\ProjectsGIT\FinalPFE\bingoDesk\obj\Debug\BingoStore.pdb
+D:\ProjectsGIT\FinalPFE\bingoDesk\obj\Debug\BingoStore.csprojAssemblyReference.cache
+D:\ProjectsGIT\FinalPFE\bingoDesk\obj\Debug\BingoStore.ShowReports.resources
+D:\ProjectsGIT\FinalPFE\bingoDesk\obj\Debug\BingoStore.ReplayRec.resources
