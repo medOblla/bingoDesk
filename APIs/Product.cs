@@ -91,36 +91,12 @@ namespace BingoStore.APIs
                 {"product_weight", product.product_weight.ToString()},
                 {"product_height", product.product_height.ToString()},
                 {"product_carrier", product.product_carrier},
-                {"product_size", product.product_size},
+                {"product_size", product.product_size.ToString()},
                 {"product_colors", product.product_colors},
                 {"local", product.local}
             };
-            Console.WriteLine(product.title);
-            Console.WriteLine(product.description);
-            Console.WriteLine(product.product_images);
-            Console.WriteLine(product.category_id);
-            Console.WriteLine(product.product_gender);
-            Console.WriteLine(product.product_brand);
-            Console.WriteLine(product.product_tags);
-            Console.WriteLine(product.price.ToString());
-            Console.WriteLine(product.old_price.ToString());
-            Console.WriteLine(product.cost_per_item.ToString());
-            Console.WriteLine(FinalProduct.profit_calcul(product.cost_per_item, product.price).ToString());
-            Console.WriteLine(product.product_barcode);
-            Console.WriteLine(product.product_sku);
-            Console.WriteLine(product.product_quantity.ToString());
-            Console.WriteLine(product.product_weight.ToString());
-            Console.WriteLine(product.product_height.ToString());
-            Console.WriteLine(product.product_carrier);
-            Console.WriteLine(product.product_size);
-            Console.WriteLine(product.product_colors);
             var content = new FormUrlEncodedContent(updated_values);
             var response = await client.PostAsync("http://127.0.0.1:8000/api/addProduct", content);
-            Console.WriteLine(JsonConvert.SerializeObject(content));
-            Console.WriteLine("----------------------------------------------");
-            Console.WriteLine(response);
-            Console.WriteLine("----------------------------------------------");
-
         }
 
         public static async void Hide_product(int product_id)
@@ -131,7 +107,6 @@ namespace BingoStore.APIs
         public static async void Delete_product(int product_id)
         {
             var response = await client.PostAsync($"http://127.0.0.1:8000/api/deleteProduct/{product_id}", null);
-            Console.WriteLine(response);
         }
 
         public static async void Edit_product(FinalProduct product)
@@ -140,9 +115,9 @@ namespace BingoStore.APIs
             {
                 {"product_title", product.title },
                 {"product_description", product.description },
-                {"product_images", product.product_images },
+                {"product_images", product.product_images},
                 {"product_category", product.category_id.ToString() },
-                {"gender", product.product_gender},
+                {"product_gender", product.product_gender},
                 {"product_brand", product.product_brand},
                 {"product_tags", product.product_tags},
                 {"product_profit_price", product.price.ToString()},
@@ -152,15 +127,15 @@ namespace BingoStore.APIs
                 {"product_barcode", product.product_barcode},
                 {"product_sku", product.product_sku},
                 {"product_quantity", product.product_quantity.ToString()},
-                {"product_wheight", product.product_weight.ToString()},
+                {"product_weight", product.product_weight.ToString()},
                 {"product_height", product.product_height.ToString()},
                 {"product_carrier", product.product_carrier},
-                {"product_size", product.product_size},
-                {"product_colors", product.product_colors}
+                {"product_size", product.product_size.ToString()},
+                {"product_colors", product.product_colors},
+                {"local", product.local}
             };
             var content = new FormUrlEncodedContent(updated_values);
             var response = await client.PostAsync($"http://127.0.0.1:8000/api/editProduct/{product.id}", content);
-            
         }
 
     }

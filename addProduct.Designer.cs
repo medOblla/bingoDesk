@@ -117,7 +117,7 @@
             this.title.BorderThickness = 1;
             this.title.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.title.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.title.ForeColor = System.Drawing.Color.Silver;
+            this.title.ForeColor = System.Drawing.Color.Black;
             this.title.isPassword = false;
             this.title.Location = new System.Drawing.Point(14, 31);
             this.title.Margin = new System.Windows.Forms.Padding(4);
@@ -273,7 +273,7 @@
             this.tags.BorderThickness = 1;
             this.tags.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tags.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.tags.ForeColor = System.Drawing.Color.Silver;
+            this.tags.ForeColor = System.Drawing.Color.Black;
             this.tags.isPassword = false;
             this.tags.Location = new System.Drawing.Point(17, 226);
             this.tags.Margin = new System.Windows.Forms.Padding(4);
@@ -380,7 +380,7 @@
             this.costPerItem.BorderThickness = 1;
             this.costPerItem.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.costPerItem.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.costPerItem.ForeColor = System.Drawing.Color.Silver;
+            this.costPerItem.ForeColor = System.Drawing.Color.Black;
             this.costPerItem.isPassword = false;
             this.costPerItem.Location = new System.Drawing.Point(15, 154);
             this.costPerItem.Margin = new System.Windows.Forms.Padding(4);
@@ -410,7 +410,7 @@
             this.compareToPrice.BorderThickness = 1;
             this.compareToPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.compareToPrice.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.compareToPrice.ForeColor = System.Drawing.Color.Silver;
+            this.compareToPrice.ForeColor = System.Drawing.Color.Black;
             this.compareToPrice.isPassword = false;
             this.compareToPrice.Location = new System.Drawing.Point(269, 69);
             this.compareToPrice.Margin = new System.Windows.Forms.Padding(4);
@@ -440,7 +440,7 @@
             this.price.BorderThickness = 1;
             this.price.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.price.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.price.ForeColor = System.Drawing.Color.Silver;
+            this.price.ForeColor = System.Drawing.Color.Black;
             this.price.isPassword = false;
             this.price.Location = new System.Drawing.Point(15, 69);
             this.price.Margin = new System.Windows.Forms.Padding(4);

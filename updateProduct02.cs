@@ -21,6 +21,7 @@ namespace BingoStore
             productCarrier.id = product.id;
             productCarrier.title = product.title;
             productCarrier.description = product.description;
+            productCarrier.product_gender = product.product_gender;
             productCarrier.category_id = product.category_id;
             productCarrier.product_brand = product.product_brand;
             productCarrier.product_tags = product.product_tags;
@@ -33,9 +34,9 @@ namespace BingoStore
             productQuantity.Text = product.product_quantity.ToString();
             weight.Text = product.product_weight.ToString();
             height.Text = product.product_height.ToString();
-            carrier.Text = product.product_carrier.ToString();
-            colors.Text = (product.product_colors != null) ? product.product_colors.ToString() : null;
-            sizes.Text = (product.product_size != null) ? product.product_size.ToString() : null;
+            //carrier.Text = product.product_carrier.ToString();
+            //colors.Text = (product.product_colors != null) ? product.product_colors.ToString() : null;
+            //sizes.Text = (product.product_size != null) ? product.product_size.ToString() : null;
         }
 
         private void save_Click(object sender, EventArgs e)
@@ -44,6 +45,7 @@ namespace BingoStore
             product.id = productCarrier.id;
             product.title = productCarrier.title;
             product.description = productCarrier.description;
+            product.product_gender = productCarrier.product_gender;
             product.category_id = productCarrier.category_id;
             product.product_brand = productCarrier.product_brand;
             product.product_tags = productCarrier.product_tags;
@@ -57,9 +59,22 @@ namespace BingoStore
             product.product_weight = double.Parse(weight.Text);
             product.product_height = double.Parse(height.Text);
             product.product_carrier = carrier.selectedValue.ToString();
-            product.product_size = (sizes.Text != null) ? "null" : sizes.Text;
-            product.product_colors = (colors.Text != null) ? "null" : colors.Text;
+            product.product_size = double.Parse(sizes.selectedValue);
+            product.product_colors = colors.selectedValue;
+            if (localStore.Checked && localWeb.Checked)
+            {
+                product.local = "WebnStore";
+            }
+            else if (localWeb.Checked && !localStore.Checked)
+            {
+                product.local = "Web";
+            }
+            else if (!localWeb.Checked && localStore.Checked)
+            {
+                product.local = "Store";
+            }
             Product.Edit_product(product);
+            MessageBox.Show("The products is updated succesfully");
         }
 
         private void back_Click(object sender, EventArgs e)

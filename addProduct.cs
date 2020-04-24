@@ -25,18 +25,27 @@ namespace BingoStore
         
         private void next_Click(object sender, EventArgs e)
         {
+
+            if (title.Text == null || description.Text == null || tags.Text == null || price.Text == null || compareToPrice.Text == null || costPerItem.Text == null)
+            {
+                MessageBox.Show("You have to fill up all the fields please ");
+            }
+            else
+            {
+                product.title = title.Text;
+                product.description = description.Text;
+                product.category_id = category.selectedIndex.ToString();
+                product.product_brand = brand.selectedValue.ToString();
+                product.product_tags = tags.Text;
+                product.product_gender = gender.selectedValue.ToString();
+                product.price = double.Parse(price.Text);
+                product.old_price = double.Parse(compareToPrice.Text);
+                product.cost_per_item = double.Parse(costPerItem.Text);
+                addProduct02 d1 = new addProduct02(product);
+                MainControlClass.showControl(d1, this);
+            }
+
             
-            product.title = title.Text;
-            product.description = description.Text;
-            product.category_id = category.selectedIndex.ToString();
-            product.product_brand = brand.selectedValue.ToString();
-            product.product_tags = tags.Text;
-            product.product_gender = gender.selectedValue.ToString();
-            product.price = double.Parse(price.Text);
-            product.old_price = double.Parse(compareToPrice.Text);
-            product.cost_per_item = double.Parse(costPerItem.Text);
-            addProduct02 d1 = new addProduct02(product);
-            MainControlClass.showControl(d1, this);
         }
 
         private void discard_Click(object sender, EventArgs e)
@@ -44,7 +53,6 @@ namespace BingoStore
             DashBrd d1 = new DashBrd();
             MainControlClass.showControl(d1, this);
         }
-
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {

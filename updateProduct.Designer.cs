@@ -33,14 +33,10 @@
             this.discard = new Bunifu.Framework.UI.BunifuFlatButton();
             this.next = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.marginVal = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.bunifuCheckbox1 = new Bunifu.Framework.UI.BunifuCheckbox();
             this.label12 = new System.Windows.Forms.Label();
             this.costPerItem = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label11 = new System.Windows.Forms.Label();
             this.compareToPrice = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.margin = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.price = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label9 = new System.Windows.Forms.Label();
@@ -48,12 +44,8 @@
             this.firstImage = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.description = new System.Windows.Forms.RichTextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.title = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.brand = new Bunifu.Framework.UI.BunifuDropdown();
+            this.gender = new Bunifu.Framework.UI.BunifuDropdown();
             this.category = new Bunifu.Framework.UI.BunifuDropdown();
             this.label14 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -61,8 +53,12 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.gender = new Bunifu.Framework.UI.BunifuDropdown();
-            this.brand = new Bunifu.Framework.UI.BunifuDropdown();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.description = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.title = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.firstPanel.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -154,20 +150,16 @@
             this.next.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.next.Textcolor = System.Drawing.Color.White;
             this.next.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.next.Click += new System.EventHandler(this.next_Click_1);
+            this.next.Click += new System.EventHandler(this.next_Click);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel5.Controls.Add(this.marginVal);
-            this.panel5.Controls.Add(this.label13);
-            this.panel5.Controls.Add(this.bunifuCheckbox1);
             this.panel5.Controls.Add(this.label12);
             this.panel5.Controls.Add(this.costPerItem);
             this.panel5.Controls.Add(this.label11);
             this.panel5.Controls.Add(this.compareToPrice);
-            this.panel5.Controls.Add(this.margin);
             this.panel5.Controls.Add(this.label10);
             this.panel5.Controls.Add(this.price);
             this.panel5.Controls.Add(this.label9);
@@ -175,41 +167,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(517, 245);
             this.panel5.TabIndex = 28;
-            // 
-            // marginVal
-            // 
-            this.marginVal.AutoSize = true;
-            this.marginVal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.marginVal.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.marginVal.Location = new System.Drawing.Point(225, 46);
-            this.marginVal.Name = "marginVal";
-            this.marginVal.Size = new System.Drawing.Size(27, 13);
-            this.marginVal.TabIndex = 35;
-            this.marginVal.Text = "20%";
-            this.marginVal.Visible = false;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.Gray;
-            this.label13.Location = new System.Drawing.Point(44, 211);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(149, 15);
-            this.label13.TabIndex = 34;
-            this.label13.Text = "Charge tax on this prodcut";
-            // 
-            // bunifuCheckbox1
-            // 
-            this.bunifuCheckbox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(93)))), ((int)(((byte)(191)))));
-            this.bunifuCheckbox1.ChechedOffColor = System.Drawing.Color.FromArgb(((int)(((byte)(132)))), ((int)(((byte)(135)))), ((int)(((byte)(140)))));
-            this.bunifuCheckbox1.Checked = true;
-            this.bunifuCheckbox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(77)))), ((int)(((byte)(93)))), ((int)(((byte)(191)))));
-            this.bunifuCheckbox1.ForeColor = System.Drawing.Color.White;
-            this.bunifuCheckbox1.Location = new System.Drawing.Point(17, 213);
-            this.bunifuCheckbox1.Name = "bunifuCheckbox1";
-            this.bunifuCheckbox1.Size = new System.Drawing.Size(20, 20);
-            this.bunifuCheckbox1.TabIndex = 33;
             // 
             // label12
             // 
@@ -229,7 +186,7 @@
             this.costPerItem.BorderThickness = 1;
             this.costPerItem.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.costPerItem.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.costPerItem.ForeColor = System.Drawing.Color.Silver;
+            this.costPerItem.ForeColor = System.Drawing.Color.Black;
             this.costPerItem.isPassword = false;
             this.costPerItem.Location = new System.Drawing.Point(15, 154);
             this.costPerItem.Margin = new System.Windows.Forms.Padding(4);
@@ -257,7 +214,7 @@
             this.compareToPrice.BorderThickness = 1;
             this.compareToPrice.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.compareToPrice.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.compareToPrice.ForeColor = System.Drawing.Color.Silver;
+            this.compareToPrice.ForeColor = System.Drawing.Color.Black;
             this.compareToPrice.isPassword = false;
             this.compareToPrice.Location = new System.Drawing.Point(269, 69);
             this.compareToPrice.Margin = new System.Windows.Forms.Padding(4);
@@ -266,18 +223,6 @@
             this.compareToPrice.TabIndex = 29;
             this.compareToPrice.Text = "MAD 0.00";
             this.compareToPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // margin
-            // 
-            this.margin.AutoSize = true;
-            this.margin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.margin.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.margin.Location = new System.Drawing.Point(167, 45);
-            this.margin.Name = "margin";
-            this.margin.Size = new System.Drawing.Size(48, 13);
-            this.margin.TabIndex = 28;
-            this.margin.Text = "Margin : ";
-            this.margin.Visible = false;
             // 
             // label10
             // 
@@ -297,7 +242,7 @@
             this.price.BorderThickness = 1;
             this.price.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.price.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.price.ForeColor = System.Drawing.Color.Silver;
+            this.price.ForeColor = System.Drawing.Color.Black;
             this.price.isPassword = false;
             this.price.Location = new System.Drawing.Point(15, 69);
             this.price.Margin = new System.Windows.Forms.Padding(4);
@@ -368,75 +313,44 @@
             this.panel2.Size = new System.Drawing.Size(517, 294);
             this.panel2.TabIndex = 26;
             // 
-            // panel4
+            // brand
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.description);
-            this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.title);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(13, 13);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(574, 294);
-            this.panel4.TabIndex = 25;
+            this.brand.BackColor = System.Drawing.Color.Transparent;
+            this.brand.BorderRadius = 3;
+            this.brand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.brand.ForeColor = System.Drawing.Color.Black;
+            this.brand.Items = new string[] {
+        "Nike",
+        "Addidas",
+        "Puma",
+        "Reebok",
+        "NewBalance",
+        "Rip Curl"};
+            this.brand.Location = new System.Drawing.Point(19, 147);
+            this.brand.Name = "brand";
+            this.brand.NomalColor = System.Drawing.Color.White;
+            this.brand.onHoverColor = System.Drawing.Color.White;
+            this.brand.selectedIndex = 0;
+            this.brand.Size = new System.Drawing.Size(471, 44);
+            this.brand.TabIndex = 41;
             // 
-            // description
+            // gender
             // 
-            this.description.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.description.Location = new System.Drawing.Point(14, 112);
-            this.description.Name = "description";
-            this.description.Size = new System.Drawing.Size(546, 172);
-            this.description.TabIndex = 24;
-            this.description.Text = "";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(10, 86);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 16);
-            this.label3.TabIndex = 23;
-            this.label3.Text = "Description";
-            // 
-            // title
-            // 
-            this.title.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
-            this.title.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.title.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.title.BorderThickness = 1;
-            this.title.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.title.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.title.ForeColor = System.Drawing.Color.Silver;
-            this.title.isPassword = false;
-            this.title.Location = new System.Drawing.Point(14, 31);
-            this.title.Margin = new System.Windows.Forms.Padding(4);
-            this.title.Name = "title";
-            this.title.Size = new System.Drawing.Size(546, 44);
-            this.title.TabIndex = 22;
-            this.title.Text = "Short sleeve t-shirt";
-            this.title.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(10, 7);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(34, 16);
-            this.label2.TabIndex = 18;
-            this.label2.Text = "Title";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 29);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Products";
+            this.gender.BackColor = System.Drawing.Color.Transparent;
+            this.gender.BorderRadius = 3;
+            this.gender.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.gender.ForeColor = System.Drawing.Color.Black;
+            this.gender.Items = new string[] {
+        "Man ",
+        "Woman ",
+        "Child"};
+            this.gender.Location = new System.Drawing.Point(269, 73);
+            this.gender.Name = "gender";
+            this.gender.NomalColor = System.Drawing.Color.White;
+            this.gender.onHoverColor = System.Drawing.Color.White;
+            this.gender.selectedIndex = 0;
+            this.gender.Size = new System.Drawing.Size(217, 44);
+            this.gender.TabIndex = 38;
             // 
             // category
             // 
@@ -515,7 +429,7 @@
             this.tags.BorderThickness = 1;
             this.tags.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.tags.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.tags.ForeColor = System.Drawing.Color.Silver;
+            this.tags.ForeColor = System.Drawing.Color.Black;
             this.tags.isPassword = false;
             this.tags.Location = new System.Drawing.Point(20, 234);
             this.tags.Margin = new System.Windows.Forms.Padding(4);
@@ -555,44 +469,75 @@
             this.label4.TabIndex = 31;
             this.label4.Text = "Product Category";
             // 
-            // gender
+            // panel4
             // 
-            this.gender.BackColor = System.Drawing.Color.Transparent;
-            this.gender.BorderRadius = 3;
-            this.gender.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.gender.ForeColor = System.Drawing.Color.Black;
-            this.gender.Items = new string[] {
-        "Man ",
-        "Woman ",
-        "Child"};
-            this.gender.Location = new System.Drawing.Point(269, 73);
-            this.gender.Name = "gender";
-            this.gender.NomalColor = System.Drawing.Color.White;
-            this.gender.onHoverColor = System.Drawing.Color.White;
-            this.gender.selectedIndex = 0;
-            this.gender.Size = new System.Drawing.Size(217, 44);
-            this.gender.TabIndex = 38;
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.description);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.title);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Location = new System.Drawing.Point(13, 13);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(574, 294);
+            this.panel4.TabIndex = 25;
             // 
-            // brand
+            // description
             // 
-            this.brand.BackColor = System.Drawing.Color.Transparent;
-            this.brand.BorderRadius = 3;
-            this.brand.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.brand.ForeColor = System.Drawing.Color.Black;
-            this.brand.Items = new string[] {
-        "Nike",
-        "Addidas",
-        "Puma",
-        "Reebok",
-        "NewBalance",
-        "Rip Curl"};
-            this.brand.Location = new System.Drawing.Point(19, 147);
-            this.brand.Name = "brand";
-            this.brand.NomalColor = System.Drawing.Color.White;
-            this.brand.onHoverColor = System.Drawing.Color.White;
-            this.brand.selectedIndex = 0;
-            this.brand.Size = new System.Drawing.Size(471, 44);
-            this.brand.TabIndex = 41;
+            this.description.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.description.Location = new System.Drawing.Point(14, 112);
+            this.description.Name = "description";
+            this.description.Size = new System.Drawing.Size(546, 172);
+            this.description.TabIndex = 24;
+            this.description.Text = "";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(10, 86);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 16);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "Description";
+            // 
+            // title
+            // 
+            this.title.BorderColorFocused = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(108)))), ((int)(((byte)(197)))));
+            this.title.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.title.BorderColorMouseHover = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.title.BorderThickness = 1;
+            this.title.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.title.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.title.ForeColor = System.Drawing.Color.Black;
+            this.title.isPassword = false;
+            this.title.Location = new System.Drawing.Point(14, 31);
+            this.title.Margin = new System.Windows.Forms.Padding(4);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(546, 44);
+            this.title.TabIndex = 22;
+            this.title.Text = "Short sleeve t-shirt";
+            this.title.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(10, 7);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(34, 16);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Title";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(15, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 29);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "Products";
             // 
             // updateProduct
             // 
@@ -624,14 +569,10 @@
         private Bunifu.Framework.UI.BunifuFlatButton discard;
         private Bunifu.Framework.UI.BunifuFlatButton next;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label marginVal;
-        private System.Windows.Forms.Label label13;
-        private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox1;
         private System.Windows.Forms.Label label12;
         private Bunifu.Framework.UI.BunifuMetroTextbox costPerItem;
         private System.Windows.Forms.Label label11;
         private Bunifu.Framework.UI.BunifuMetroTextbox compareToPrice;
-        private System.Windows.Forms.Label margin;
         private System.Windows.Forms.Label label10;
         private Bunifu.Framework.UI.BunifuMetroTextbox price;
         private System.Windows.Forms.Label label9;

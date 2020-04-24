@@ -76,31 +76,11 @@ namespace BingoStore
             {
                 product.local = "Store";
             }
-            product.product_size = sizes.Text;
-            product.product_colors = colors.Text;
-            //Product.Add_Product(product);
-
-            Console.WriteLine(product.title);
-            Console.WriteLine(product.description);
-            Console.WriteLine(product.product_images);
-            Console.WriteLine(product.category_id);
-            Console.WriteLine(product.product_gender);
-            Console.WriteLine(product.product_brand);
-            Console.WriteLine(product.product_tags);
-            Console.WriteLine(product.price.ToString());
-            Console.WriteLine(product.old_price.ToString());
-            Console.WriteLine(product.cost_per_item.ToString());
-            Console.WriteLine(FinalProduct.profit_calcul(product.cost_per_item, product.price).ToString());
-            Console.WriteLine(product.product_barcode);
-            Console.WriteLine(product.product_sku);
-            Console.WriteLine(product.product_quantity.ToString());
-            Console.WriteLine(product.product_weight.ToString());
-            Console.WriteLine(product.product_height.ToString());
-            Console.WriteLine(product.product_carrier);
-            Console.WriteLine(product.product_size);
-            Console.WriteLine(product.product_colors);
-
-            MessageBox.Show(sizes.selectedValue.ToString());
+            product.product_size = double.Parse(sizes.selectedValue);
+            product.product_colors = colors.selectedValue;
+            Product.Add_Product(product);
+            MessageBox.Show("The products is added succesfully");
+            
         }
 
         private void sku_Enter(object sender, EventArgs e)

@@ -60,6 +60,8 @@
             this.sku = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.label8 = new System.Windows.Forms.Label();
             this.optionsPanel = new System.Windows.Forms.Panel();
+            this.sizes = new Bunifu.Framework.UI.BunifuDropdown();
+            this.colors = new Bunifu.Framework.UI.BunifuDropdown();
             this.label10 = new System.Windows.Forms.Label();
             this.remove02 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -70,8 +72,6 @@
             this.haveOptions = new Bunifu.Framework.UI.BunifuCheckbox();
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.colors = new Bunifu.Framework.UI.BunifuDropdown();
-            this.sizes = new Bunifu.Framework.UI.BunifuDropdown();
             this.firstPanel.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -218,14 +218,14 @@
             this.height.BorderThickness = 1;
             this.height.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.height.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.height.ForeColor = System.Drawing.Color.Silver;
+            this.height.ForeColor = System.Drawing.Color.Black;
             this.height.isPassword = false;
             this.height.Location = new System.Drawing.Point(293, 117);
             this.height.Margin = new System.Windows.Forms.Padding(4);
             this.height.Name = "height";
             this.height.Size = new System.Drawing.Size(242, 44);
             this.height.TabIndex = 42;
-            this.height.Text = "CM 0.0";
+            this.height.Text = "0.0 CM";
             this.height.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.height.Enter += new System.EventHandler(this.height_Enter);
             // 
@@ -269,14 +269,14 @@
             this.weight.BorderThickness = 1;
             this.weight.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.weight.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.weight.ForeColor = System.Drawing.Color.Silver;
+            this.weight.ForeColor = System.Drawing.Color.Black;
             this.weight.isPassword = false;
             this.weight.Location = new System.Drawing.Point(15, 117);
             this.weight.Margin = new System.Windows.Forms.Padding(4);
             this.weight.Name = "weight";
             this.weight.Size = new System.Drawing.Size(208, 44);
             this.weight.TabIndex = 24;
-            this.weight.Text = "KG 0.0";
+            this.weight.Text = "0.0 G";
             this.weight.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.weight.Enter += new System.EventHandler(this.weight_Enter);
             // 
@@ -453,7 +453,7 @@
             this.productQuantity.BorderThickness = 1;
             this.productQuantity.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.productQuantity.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.productQuantity.ForeColor = System.Drawing.Color.Silver;
+            this.productQuantity.ForeColor = System.Drawing.Color.Black;
             this.productQuantity.isPassword = false;
             this.productQuantity.Location = new System.Drawing.Point(17, 226);
             this.productQuantity.Margin = new System.Windows.Forms.Padding(4);
@@ -482,7 +482,7 @@
             this.barcode.BorderThickness = 1;
             this.barcode.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.barcode.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.barcode.ForeColor = System.Drawing.Color.Silver;
+            this.barcode.ForeColor = System.Drawing.Color.Black;
             this.barcode.isPassword = false;
             this.barcode.Location = new System.Drawing.Point(292, 65);
             this.barcode.Margin = new System.Windows.Forms.Padding(4);
@@ -511,7 +511,7 @@
             this.sku.BorderThickness = 1;
             this.sku.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.sku.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.sku.ForeColor = System.Drawing.Color.Silver;
+            this.sku.ForeColor = System.Drawing.Color.Black;
             this.sku.isPassword = false;
             this.sku.Location = new System.Drawing.Point(17, 65);
             this.sku.Margin = new System.Windows.Forms.Padding(4);
@@ -547,6 +547,45 @@
             this.optionsPanel.Name = "optionsPanel";
             this.optionsPanel.Size = new System.Drawing.Size(556, 398);
             this.optionsPanel.TabIndex = 31;
+            // 
+            // sizes
+            // 
+            this.sizes.BackColor = System.Drawing.Color.Transparent;
+            this.sizes.BorderRadius = 3;
+            this.sizes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.sizes.ForeColor = System.Drawing.Color.Black;
+            this.sizes.Items = new string[] {
+        "45",
+        "40",
+        "30",
+        "35",
+        ""};
+            this.sizes.Location = new System.Drawing.Point(15, 87);
+            this.sizes.Name = "sizes";
+            this.sizes.NomalColor = System.Drawing.Color.White;
+            this.sizes.onHoverColor = System.Drawing.Color.White;
+            this.sizes.selectedIndex = 0;
+            this.sizes.Size = new System.Drawing.Size(520, 44);
+            this.sizes.TabIndex = 45;
+            // 
+            // colors
+            // 
+            this.colors.BackColor = System.Drawing.Color.Transparent;
+            this.colors.BorderRadius = 3;
+            this.colors.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.colors.ForeColor = System.Drawing.Color.Black;
+            this.colors.Items = new string[] {
+        "black",
+        "violet",
+        "blue",
+        "yellow"};
+            this.colors.Location = new System.Drawing.Point(15, 171);
+            this.colors.Name = "colors";
+            this.colors.NomalColor = System.Drawing.Color.White;
+            this.colors.onHoverColor = System.Drawing.Color.White;
+            this.colors.selectedIndex = 0;
+            this.colors.Size = new System.Drawing.Size(520, 44);
+            this.colors.TabIndex = 45;
             // 
             // label10
             // 
@@ -654,44 +693,6 @@
             this.label1.Size = new System.Drawing.Size(125, 42);
             this.label1.TabIndex = 19;
             this.label1.Text = "Products";
-            // 
-            // colors
-            // 
-            this.colors.BackColor = System.Drawing.Color.Transparent;
-            this.colors.BorderRadius = 3;
-            this.colors.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.colors.ForeColor = System.Drawing.Color.Black;
-            this.colors.Items = new string[] {
-        "black",
-        "violet",
-        "blue",
-        "yellow"};
-            this.colors.Location = new System.Drawing.Point(15, 171);
-            this.colors.Name = "colors";
-            this.colors.NomalColor = System.Drawing.Color.White;
-            this.colors.onHoverColor = System.Drawing.Color.White;
-            this.colors.selectedIndex = 0;
-            this.colors.Size = new System.Drawing.Size(520, 44);
-            this.colors.TabIndex = 45;
-            // 
-            // sizes
-            // 
-            this.sizes.BackColor = System.Drawing.Color.Transparent;
-            this.sizes.BorderRadius = 3;
-            this.sizes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.sizes.ForeColor = System.Drawing.Color.Black;
-            this.sizes.Items = new string[] {
-        "SM",
-        "LG",
-        "XL",
-        "XXL"};
-            this.sizes.Location = new System.Drawing.Point(15, 87);
-            this.sizes.Name = "sizes";
-            this.sizes.NomalColor = System.Drawing.Color.White;
-            this.sizes.onHoverColor = System.Drawing.Color.White;
-            this.sizes.selectedIndex = 0;
-            this.sizes.Size = new System.Drawing.Size(520, 44);
-            this.sizes.TabIndex = 45;
             // 
             // addProduct02
             // 

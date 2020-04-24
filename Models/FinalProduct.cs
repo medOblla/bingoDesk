@@ -27,7 +27,7 @@ namespace BingoStore.Models
         public double product_weight { get; set; }
         public double product_height { get; set; }
         public string product_carrier { get; set; }
-        public string product_size { get; set; }
+        public double product_size { get; set; }
         public string product_colors { get; set; }
         public string local { get; set; }
 

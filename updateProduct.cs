@@ -26,8 +26,9 @@ namespace BingoStore
             InitializeComponent();
             title.Text = product.title;
             description.Text = product.description;
-          //  category.Text = product.product_category.ToString();
-           // brand.Text = product.product_brand;
+            category.selectedIndex = int.Parse(product.category_id);
+            //gender.selectedValue = product.product_gender;
+            brand.Text = product.product_brand;
             tags.Text = product.product_tags;
             price.Text = product.price.ToString();
             compareToPrice.Text = product.old_price.ToString();
@@ -49,6 +50,7 @@ namespace BingoStore
             product.title = title.Text;
             product.product_gender = gender.selectedValue.ToString();
             product.description = description.Text;
+            product.product_tags = tags.Text;
             product.category_id = category.selectedIndex.ToString();
             product.product_brand = brand.selectedValue.ToString();
             product.price = double.Parse(price.Text);
@@ -64,8 +66,6 @@ namespace BingoStore
             MainControlClass.showControl(nextStep, this);
 
         }
-
-
 
         private void firstImage_Click(object sender, EventArgs e)
         {
@@ -95,28 +95,63 @@ namespace BingoStore
             MainControlClass.showControl(d1, this);
         }
 
-        private void next_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void category_onItemSelected(object sender, EventArgs e)
         {
 
         }
 
+        public bool flag = false;
+        public int counter = 0;
         private void price_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&(e.KeyChar != '.'))
+            if (price.Text.Contains('.')) flag = true; else flag = false;
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
             {
                 e.Handled = true;
             }
-
-            // only allow one decimal point
-            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            if ((e.KeyChar == '.'))
             {
-                e.Handled = true;
+                counter++;
+
+                if (counter > 1 && flag) e.Handled = true;
             }
         }
+
+        public bool flag1 = false;
+        public int counter1 = 0;
+        private void compareToPrice_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (compareToPrice.Text.Contains('.')) flag1 = true; else flag1 = false;
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.'))
+            {
+                counter1++;
+
+                if (counter1 > 1 && flag1) e.Handled = true;
+            }
+        }
+
+        public bool flag2 = false;
+        public int counter2 = 0;
+        private void costPerItem_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (costPerItem.Text.Contains('.')) flag2 = true; else flag2 = false;
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+            if ((e.KeyChar == '.'))
+            {
+                counter2++;
+
+                if (counter2 > 1 && flag2) e.Handled = true;
+            }
+
+
+        }
+
     }
 }
